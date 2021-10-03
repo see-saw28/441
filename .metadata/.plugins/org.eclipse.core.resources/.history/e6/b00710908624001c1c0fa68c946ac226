@@ -60,6 +60,8 @@ int main(void) {
 
 	while (1) {
 
+
+
 		if ((BP1 == 0) && (BP2 == 0)){
 			LPC_CTIMER0->TCR=(1<<CRST);
 		}

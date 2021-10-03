@@ -1,0 +1,19 @@
+11:03:36 **** Incremental Build of configuration flash for project TP2 ****
+make -r -j8 all 
+Building target: TP2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP2.axf"  ./src/Base_TP_II1.o ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        3528 B      32640 B     10.81%
+         RamLoc4:         488 B         4 KB     11.91%
+Finished building target: TP2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP2.axf"; # arm-none-eabi-objcopy -v -O binary "TP2.axf" "TP2.bin" ; # checksum -p LPC804 -d "TP2.bin";
+   text	   data	    bss	    dec	    hex	filename
+   3528	      0	    488	   4016	    fb0	TP2.axf
+ 
+
+11:03:37 Build Finished. 0 errors, 0 warnings. (took 932ms)
+

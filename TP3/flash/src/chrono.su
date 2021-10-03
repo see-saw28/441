@@ -1,0 +1,2 @@
+../src/chrono.c:19:6:delay	16	static
+../src/chrono.c:23:5:main	24	static

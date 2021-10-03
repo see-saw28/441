@@ -1,0 +1,6 @@
+12:17:20 **** Incremental Build of configuration flash for project TP4 ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+
+12:17:21 Build Finished. 0 errors, 0 warnings. (took 120ms)
+

@@ -1,0 +1,6 @@
+21:06:26 **** Incremental Build of configuration flash for project TP3_timer_chrono ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+
+21:06:26 Build Finished. 0 errors, 0 warnings. (took 194ms)
+

@@ -1,0 +1,211 @@
+// Programme de base TP II ENS
+
+#include "LPC8xx.h"
+#include "syscon.h"
+#include "lib_ENS_II1_lcd.h"
+
+
+#define BP1  LPC_GPIO_PORT->B0[13]
+#define BP2  LPC_GPIO_PORT->B0[12]
+#define LED1 LPC_GPIO_PORT->B0[19]
+#define LED2 LPC_GPIO_PORT->B0[17]
+#define LED3 LPC_GPIO_PORT->B0[21]
+#define LED4 LPC_GPIO_PORT->B0[11]
+
+int main(void) {
+
+	uint32_t i = 0;
+
+	// Activation du périphérique d'entrées/sorties TOR, du timer et switch matrix
+	LPC_SYSCON->SYSAHBCLKCTRL0 |= (1<<25) | (SWM) | GPIO;
+
+	//Configuration en sortie des broches P0_11, 17, 19 et 21
+	LPC_GPIO_PORT->DIR0 |= (1 << 11) | (1 << 17) | (1 << 19) | (1 << 21);
+
+
+
+	//Initialisation de l'afficheur lcd et affichage d'un texte
+	init_lcd();
+	lcd_puts("ORGUE");
+
+
+
+	int button_bp1 = 0, fm_bp1 = 0;
+	int button_bp2 = 0, fm_bp2 = 0;
+
+	int ecran = 0;
+	const int nombre_pages = 5;
+	int option = 0, home = 0, option_en = 0;
+
+
+	int refresh = 0;
+	int tempo = 100;
+	const int tempo_min = 40, tempo_max = 220;
+
+	char display[100];
+
+
+
+	while (1) {
+
+
+		refresh = 0;
+		fm_bp1 = 0;
+
+		//lecture bouton
+		if ((BP1==0)&&(button_bp1==1)){
+			fm_bp1=1;
+			refresh = 1;
+
+		}
+
+		button_bp1 = BP1;
+
+		if ((BP2==0)&&(button_bp2==1)){
+			fm_bp2 = 1;
+			refresh = 1;
+		}
+
+		button_bp2 = BP2;
+
+		//gestion bouton
+		if (home){
+			if (fm_bp2){
+				home = 0;
+				option = 1;
+			}
+
+		}
+
+		else if (option){
+			if (fm_bp1){
+				if (ecran<nombre_pages){
+					ecran++;
+				}
+
+				else {
+					ecran = 1;
+				}
+			}
+			else if (fm_bp2){
+				home = 0;
+				option = 1;
+			}
+		}
+
+		else if (option_en){
+			switch(ecran){
+				case 1 :
+
+					break;
+				case 2 :
+					if (fm_bp1){
+						if (tempo<tempo_max){
+							tempo+=5;
+						}
+
+						else {
+							tempo = tempo_min;
+						}
+					}
+					else if (fm_bp2){
+						home = 0;
+						option = 1;
+					}
+
+					break;
+				case 3 :
+
+					break;
+				case 4 :
+
+					break;
+				case 5 :
+					if (fm_bp2 || fm_bp1){
+						home = 1;
+						option = 0;
+					}
+
+					break;
+
+				}
+		}
+
+
+
+
+		//gestion affichage
+
+			if (home){
+				lcd_gohome();
+
+			}
+
+			else if (option){
+				lcd_gohome();
+				switch(ecran){
+				case 1 :
+					sprintf(display,"%16s", "MANUEL/AUTO");
+					break;
+				case 2 :
+					sprintf(display,"%16s", "TEMPO");
+					break;
+				case 3 :
+					sprintf(display,"%16s", "CHOIX MUSIQUE");
+					break;
+				case 4 :
+					sprintf(display,"%16s", "VOLUME");
+					break;
+				case 5 :
+					sprintf(display,"%16s", "ORGUE5");
+					break;
+
+				}
+
+				lcd_puts(display);
+			}
+
+			else if (option_en){
+				lcd_gohome();
+				switch(ecran){
+				case 1 :
+					lcd_puts("ORGUE1");
+					break;
+				case 2 :
+
+
+					lcd_puts("TEMPO :");
+					lcd_position(1,0);
+					sprintf(display,"%16d", tempo);
+					lcd_puts(display);
+
+
+					break;
+				case 3 :
+					lcd_puts("ORGUE3");
+					break;
+				case 4 :
+					lcd_puts("ORGUE4");
+					break;
+				case 5 :
+					lcd_puts("EXIT");
+					break;
+
+				}
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	} // end of while(1)
+
+} // end of main

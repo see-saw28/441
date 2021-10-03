@@ -1,0 +1,6 @@
+19:47:06 **** Incremental Build of configuration flash for project chenille ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+
+19:47:06 Build Finished. 0 errors, 0 warnings. (took 122ms)
+

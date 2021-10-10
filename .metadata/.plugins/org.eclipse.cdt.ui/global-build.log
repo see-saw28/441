@@ -1,89 +1,406 @@
-21:06:08 **** Incremental Build of configuration flash for project peripherals_lib ****
+22:53:20 **** Incremental Build of configuration flash for project peripherals_lib ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-21:06:10 **** Incremental Build of configuration flash for project utilities_lib ****
+22:53:20 **** Incremental Build of configuration flash for project utilities_lib ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-21:06:11 **** Incremental Build of configuration flash for project TP3_timer_chrono ****
-make -r -j8 all 
-Building target: TP3_timer_chrono.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP3_timer_chrono.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP3_timer_chrono.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/chrono.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
-Memory region         Used Size  Region Size  %age Used
-        MFlash32:        8048 B      32640 B     24.66%
-         RamLoc4:         492 B         4 KB     12.01%
-Finished building target: TP3_timer_chrono.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "TP3_timer_chrono.axf"; # arm-none-eabi-objcopy -v -O binary "TP3_timer_chrono.axf" "TP3_timer_chrono.bin" ; # checksum -p LPC804 -d "TP3_timer_chrono.bin";
-   text	   data	    bss	    dec	    hex	filename
-   8048	      0	    492	   8540	   215c	TP3_timer_chrono.axf
- 
-21:06:23 **** Incremental Build of configuration flash for project peripherals_lib ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-21:06:24 **** Incremental Build of configuration flash for project utilities_lib ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-21:06:24 **** Incremental Build of configuration flash for project TP3_timer_chrono ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-21:06:26 **** Incremental Build of configuration flash for project TP3_timer_chrono ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-21:08:31 **** Incremental Build of configuration flash for project peripherals_lib ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-21:08:31 **** Incremental Build of configuration flash for project utilities_lib ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-21:08:32 **** Build of configuration flash for project TP3_timer_chrono_chenillard ****
+22:53:21 **** Build of configuration flash for project TP4_capture ****
 make -r -j8 all 
 Building file: ../src/MCUXpresso_cr_startup.c
 Building file: ../src/MCUXpresso_crp.c
 Building file: ../src/MCUXpresso_mtb.c
-Building file: ../src/chrono.c
+Building file: ../src/capture.c
 Building file: ../src/lib_ENS_II1_lcd.c
 Invoking: MCU C Compiler
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP3_timer_chrono_chenillard\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/MCUXpresso_cr_startup.d" -MT"src/MCUXpresso_cr_startup.o" -MT"src/MCUXpresso_cr_startup.d" -o "src/MCUXpresso_cr_startup.o" "../src/MCUXpresso_cr_startup.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP3_timer_chrono_chenillard\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\Invoking: MCU C Compiler
-inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/MCUXpresso_crp.d" -MT"src/MCUXpresso_crp.o" -MT"src/MCUXpresso_crp.d" -o "src/MCUXpresso_crp.o" "../src/MCUXpresso_crp.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP3_timer_chrono_chenillard\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/MCUXpresso_mtb.d" -MT"src/MCUXpresso_mtb.o" -MT"src/MCUXpresso_mtb.d" -o "src/MCUXpresso_mtb.o" "../src/MCUXpresso_mtb.c"
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP3_timer_chrono_chenillard\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/chrono.d" -MT"src/chrono.o" -MT"src/chrono.d" -o "src/chrono.o" "../src/chrono.c"
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP3_timer_chrono_chenillard\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lib_ENS_II1_lcd.d" -MT"src/lib_ENS_II1_lcd.o" -MT"src/lib_ENS_II1_lcd.d" -o "src/lib_ENS_II1_lcd.o" "../src/lib_ENS_II1_lcd.c"
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/MCUXpresso_cr_startup.d" -MT"src/MCUXpresso_cr_startup.o" -MT"src/MCUXpresso_cr_startup.d" -o "src/MCUXpresso_cr_startup.o" "../src/MCUXpresso_cr_startup.c"
 Building file: ../src/system.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP3_timer_chrono_chenillard\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/system.d" -MT"src/system.o" -MT"src/system.d" -o "src/system.o" "../src/system.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/MCUXpresso_crp.d" -MT"src/MCUXpresso_crp.o" -MT"src/MCUXpresso_crp.d" -o "src/MCUXpresso_crp.o" "../src/MCUXpresso_crp.c"
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/MCUXpresso_mtb.d" -MT"src/MCUXpresso_mtb.o" -MT"src/MCUXpresso_mtb.d" -o "src/MCUXpresso_mtb.o" "../src/MCUXpresso_mtb.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lib_ENS_II1_lcd.d" -MT"src/lib_ENS_II1_lcd.o" -MT"src/lib_ENS_II1_lcd.d" -o "src/lib_ENS_II1_lcd.o" "../src/lib_ENS_II1_lcd.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/system.d" -MT"src/system.o" -MT"src/system.d" -o "src/system.o" "../src/system.c"
+../src/capture.c: In function 'main':
+../src/capture.c:89:38: error: 'LPC_TIMER_TypeDef' has no member named 'CR1'; did you mean 'CR'?
+   89 |    sprintf(snum,"%16d", LPC_CTIMER0->CR1-LPC_CTIMER0->CR0);
+      |                                      ^~~
+      |                                      CR
+../src/capture.c:89:55: error: 'LPC_TIMER_TypeDef' has no member named 'CR0'; did you mean 'CR'?
+   89 |    sprintf(snum,"%16d", LPC_CTIMER0->CR1-LPC_CTIMER0->CR0);
+      |                                                       ^~~
+      |                                                       CR
 Finished building: ../src/MCUXpresso_crp.c
-Finished building: ../src/MCUXpresso_cr_startup.c
+make: *** [src/subdir.mk:36: src/capture.o] Error 1
+make: *** Waiting for unfinished jobs....
 Finished building: ../src/MCUXpresso_mtb.c
-Finished building: ../src/chrono.c
-Finished building: ../src/lib_ENS_II1_lcd.c
+ 
+ 
+Finished building: ../src/MCUXpresso_cr_startup.c
 Finished building: ../src/system.c
+Finished building: ../src/lib_ENS_II1_lcd.c
  
  
  
+"make -r -j8 all" terminated with exit code 2. Build might be incomplete.
+22:54:04 **** Incremental Build of configuration flash for project TP4_440Hz ****
+make -r -j8 all 
+Building file: ../src/pwm_440.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_440Hz\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/pwm_440.d" -MT"src/pwm_440.o" -MT"src/pwm_440.d" -o "src/pwm_440.o" "../src/pwm_440.c"
+Finished building: ../src/pwm_440.c
  
- 
- 
-Building target: TP3_timer_chrono_chenillard.axf
+Building target: TP4_440Hz.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP3_timer_chrono_chenillard.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP3_timer_chrono_chenillard.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/chrono.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_440Hz.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_440Hz.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/pwm_440.o ./src/system.o   -lperipherals_lib -lutilities_lib
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:        8020 B      32640 B     24.57%
-         RamLoc4:         492 B         4 KB     12.01%
-Finished building target: TP3_timer_chrono_chenillard.axf
+        MFlash32:        3500 B      32640 B     10.72%
+         RamLoc4:         484 B         4 KB     11.82%
+Finished building target: TP4_440Hz.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "TP3_timer_chrono_chenillard.axf"; # arm-none-eabi-objcopy -v -O binary "TP3_timer_chrono_chenillard.axf" "TP3_timer_chrono_chenillard.bin" ; # checksum -p LPC804 -d "TP3_timer_chrono_chenillard.bin";
+arm-none-eabi-size "TP4_440Hz.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_440Hz.axf" "TP4_440Hz.bin" ; # checksum -p LPC804 -d "TP4_440Hz.bin";
    text	   data	    bss	    dec	    hex	filename
-   8020	      0	    492	   8512	   2140	TP3_timer_chrono_chenillard.axf
+   3500	      0	    484	   3984	    f90	TP4_440Hz.axf
  
-21:08:37 **** Incremental Build of configuration flash for project TP3_timer_chrono_chenillard ****
+22:55:02 **** Incremental Build of configuration flash for project peripherals_lib ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
+22:55:03 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+22:55:03 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        7876 B      32640 B     24.13%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7876	      0	    492	   8368	   20b0	TP4_capture.axf
+ 
+22:55:06 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+22:55:20 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+22:55:45 **** Incremental Build of configuration flash for project peripherals_lib ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+22:55:45 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+22:55:46 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+22:55:48 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+22:56:53 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+22:59:47 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+../src/capture.c: In function 'main':
+../src/capture.c:89:38: error: 'LPC_TIMER_TypeDef' has no member named 'CR1'; did you mean 'CR'?
+   89 |    sprintf(snum,"%16d", LPC_CTIMER0->CR1-LPC_CTIMER0->CR0);
+      |                                      ^~~
+      |                                      CR
+../src/capture.c:89:55: error: 'LPC_TIMER_TypeDef' has no member named 'CR0'; did you mean 'CR'?
+   89 |    sprintf(snum,"%16d", LPC_CTIMER0->CR1-LPC_CTIMER0->CR0);
+      |                                                       ^~~
+      |                                                       CR
+make: *** [src/subdir.mk:35: src/capture.o] Error 1
+"make -r -j8 all" terminated with exit code 2. Build might be incomplete.
+23:01:29 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+../src/capture.c: In function 'main':
+../src/capture.c:24:57: error: 'CAP' undeclared (first use in this function); did you mean 'CAPT'?
+   24 |  LPC_SYSCON->SYSAHBCLKCTRL0 |= (1<<25) | (SWM) | GPIO | CAP;
+      |                                                         ^~~
+      |                                                         CAPT
+../src/capture.c:24:57: note: each undeclared identifier is reported only once for each function it appears in
+../src/capture.c:89:38: error: 'LPC_TIMER_TypeDef' has no member named 'CR1'; did you mean 'CR'?
+   89 |    sprintf(snum,"%16d", LPC_CTIMER0->CR1-LPC_CTIMER0->CR0);
+      |                                      ^~~
+      |                                      CR
+../src/capture.c:89:55: error: 'LPC_TIMER_TypeDef' has no member named 'CR0'; did you mean 'CR'?
+   89 |    sprintf(snum,"%16d", LPC_CTIMER0->CR1-LPC_CTIMER0->CR0);
+      |                                                       ^~~
+      |                                                       CR
+make: *** [src/subdir.mk:35: src/capture.o] Error 1
+"make -r -j8 all" terminated with exit code 2. Build might be incomplete.
+23:01:47 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        7876 B      32640 B     24.13%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7876	      0	    492	   8368	   20b0	TP4_capture.axf
+ 
+23:05:15 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        7860 B      32640 B     24.08%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7860	      0	    492	   8352	   20a0	TP4_capture.axf
+ 
+23:06:07 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        7856 B      32640 B     24.07%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7856	      0	    492	   8348	   209c	TP4_capture.axf
+ 
+23:06:49 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        7856 B      32640 B     24.07%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7856	      0	    492	   8348	   209c	TP4_capture.axf
+ 
+23:08:27 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        7856 B      32640 B     24.07%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7856	      0	    492	   8348	   209c	TP4_capture.axf
+ 
+23:13:15 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        7868 B      32640 B     24.11%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7868	      0	    492	   8360	   20a8	TP4_capture.axf
+ 
+23:14:09 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        8008 B      32640 B     24.53%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8008	      0	    492	   8500	   2134	TP4_capture.axf
+ 
+23:14:51 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        8008 B      32640 B     24.53%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8008	      0	    492	   8500	   2134	TP4_capture.axf
+ 
+23:15:56 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        8008 B      32640 B     24.53%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8008	      0	    492	   8500	   2134	TP4_capture.axf
+ 
+23:16:41 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        8008 B      32640 B     24.53%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8008	      0	    492	   8500	   2134	TP4_capture.axf
+ 
+23:17:31 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        8008 B      32640 B     24.53%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8008	      0	    492	   8500	   2134	TP4_capture.axf
+ 
+23:17:57 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        8008 B      32640 B     24.53%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8008	      0	    492	   8500	   2134	TP4_capture.axf
+ 

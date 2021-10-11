@@ -17,31 +17,13 @@
 //LPC_PWRD_API→set_fro_frequency(30000);
 
 int main(void) {
-
-
-
-
 	LPC_SYSCON->SYSAHBCLKCTRL0 |= (1<<25) | (SWM) | GPIO;
-
-
 
 	//Configuration en sortie des broches P0_11, 17, 19 et 21
 	LPC_GPIO_PORT->DIR0 |= (1 << 17)|(1<<21) | (1<<19);
 
-	//timer enable
-	LPC_CTIMER0->TCR=(1<<CEN);
-
 	//precision microseconde
 	LPC_CTIMER0->PR=1499;
-
-	/*
-	//recopie de la valeur du compteur sur CR0 sur front descendant
-	LPC_CTIMER0->CCR=(1<<CAP0FE);
-
-	//BP1 sur CAP0
-	LPC_SWM->PINASSIGN3 &= ~(0xFF<<8);
-	LPC_SWM->PINASSIGN3 |= 13<<8;
-	*/
 
 	//recopie de la valeur du compteur sur CR1 sur front montant
 	LPC_CTIMER0->CCR=(1<<CAP1RE);
@@ -50,67 +32,28 @@ int main(void) {
 	LPC_SWM->PINASSIGN3 &= ~(0xFF<<16);
 	LPC_SWM->PINASSIGN3 |= 13<<16;
 
-
-	/*
-	//440Hz ie comp0 = 100 000 / 440
-	LPC_CTIMER0->MR[3]=227;
-
-	//mise a zero / MR3
-	LPC_CTIMER0->MCR |= (1<<MR3R);
-
-
-	//LPC_CTIMER0->EMR|=(3<<4);
-
-	//pwm 50% ie comp1
-	LPC_CTIMER0->MR[1]=50;
-
-	//mat1
-	LPC_CTIMER0->PWMC = (1<<PWMEN1);
-
-
-	LPC_SWM->PINASSIGN4 &= ~(0xFF<<8);
-	LPC_SWM->PINASSIGN4 |= 19<<8;
-
-	*/
-
-
-
-	int old_bp1=0;
-	int old_timer=0;
-
-
-	char snum[100];
-
+	int old_timer=0;//ancienne valeur temps de capture
+	char snum[100];//string à afficher
 
 	//Initialisation de l'afficheur lcd et affichage d'un texte
 	init_lcd();
-
 	lcd_puts("capture");
 
 	while (1) {
-
-
-
-		if (BP1){
-			if (old_timer !=LPC_CTIMER0->CR[1]){
+		if (BP1){//bouton relaché
+			if (old_timer !=LPC_CTIMER0->CR[1]){//affichage si nouvelle valeur ie un appui réalisé
 				sprintf(snum,"%16d", LPC_CTIMER0->CR[1]);
 				lcd_position(1,0);
 				lcd_puts(snum);
 				old_timer = LPC_CTIMER0->CR[1];
 			}
-			LPC_CTIMER0->TCR=(1<<CRST);
+			LPC_CTIMER0->TCR=(1<<CRST);//reinit du timer
 		}
 
-		else {
-			LPC_CTIMER0->TCR=(1<<CEN);
+		else {//bouton enfoncé
+			LPC_CTIMER0->TCR=(1<<CEN);//activation du timer
 		}
 
-
-		old_bp1=BP1;
-
-
-
-		//LED1 = LPC_GPIO_PORT->B0[21];
 	} // end of while(1)
 
 } // end of main

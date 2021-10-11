@@ -1,25 +1,15 @@
-22:19:50 **** Incremental Build of configuration flash for project TP4 ****
+18:56:25 **** Incremental Build of configuration flash for project TP4 ****
 make -r -j8 all 
 Building file: ../src/pwm.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -MT"src/pwm.d" -o "src/pwm.o" "../src/pwm.c"
-../src/pwm.c: In function 'main':
-../src/pwm.c:62:7: warning: unused variable 'snum' [-Wunused-variable]
-   62 |  char snum[100];
-      |       ^~~~
-../src/pwm.c:59:20: warning: unused variable 'bp2_state' [-Wunused-variable]
-   59 |  int bp1_state = 0,bp2_state = 0, old_timer = 0;
-      |                    ^~~~~~~~~
-../src/pwm.c:59:6: warning: unused variable 'bp1_state' [-Wunused-variable]
-   59 |  int bp1_state = 0,bp2_state = 0, old_timer = 0;
-      |      ^~~~~~~~~
 Finished building: ../src/pwm.c
  
 Building target: TP4.axf
 Invoking: MCU Linker
 arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/pwm.o ./src/system.o   -lperipherals_lib -lutilities_lib
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:        3380 B      32640 B     10.36%
+        MFlash32:        3488 B      32640 B     10.69%
          RamLoc4:         484 B         4 KB     11.82%
 Finished building target: TP4.axf
  
@@ -27,8 +17,8 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "TP4.axf"; # arm-none-eabi-objcopy -v -O binary "TP4.axf" "TP4.bin" ; # checksum -p LPC804 -d "TP4.bin";
    text	   data	    bss	    dec	    hex	filename
-   3380	      0	    484	   3864	    f18	TP4.axf
+   3488	      0	    484	   3972	    f84	TP4.axf
  
 
-22:19:54 Build Finished. 0 errors, 3 warnings. (took 4s.460ms)
+18:56:27 Build Finished. 0 errors, 0 warnings. (took 1s.267ms)
 

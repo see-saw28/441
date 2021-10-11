@@ -76,6 +76,7 @@ int main(void) {
 
 
 	int old_bp1=0;
+	int old_timer=0;
 
 
 	char snum[100];
@@ -88,13 +89,15 @@ int main(void) {
 
 	while (1) {
 
-		if (old_bp1 && (BP1==0)){
-			sprintf(snum,"%16d", LPC_CTIMER0->CR[1]);
-			lcd_position(1,0);
-			lcd_puts(snum);
-		}
+
 
 		if (BP1){
+			if (old_timer !=LPC_CTIMER0->CR[1]){
+				sprintf(snum,"%16d", LPC_CTIMER0->CR[1]);
+				lcd_position(1,0);
+				lcd_puts(snum);
+				old_timer = LPC_CTIMER0->CR[1];
+			}
 			LPC_CTIMER0->TCR=(1<<CRST);
 		}
 

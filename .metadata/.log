@@ -8860,3 +8860,947 @@ java.lang.Exception: Stopping Thread 1 failed: T06thread:1;
 
 !ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2021-10-10 23:29:18.921
 !MESSAGE Unable to parse ProbeList output to get probe ref count: []
+!SESSION 2021-10-11 18:17:49.358 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-10-11 18:17:56.526
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2021-10-11 18:18:12.036
+!MESSAGE Recreating part support. No part support available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-10-11 18:18:21.347
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\paulg'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-11 18:22:04.552
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.crt.log 1 0 2021-10-11 18:22:06.560
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-11 18:22:06.569
+!MESSAGE RedlinkServer telnet session connected on port 3025->56230 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-11 18:22:08.585
+!MESSAGE Telnet session connected on port 3330->56234 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-11 18:22:10.413
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-11 18:25:23.198
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY org.eclipse.cdt.dsf.ui 4 10001 2021-10-11 18:25:25.192
+!MESSAGE Connection is shut down
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2021-10-11 18:25:25.192
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf.ui 4 10001 2021-10-11 18:25:25.194
+!MESSAGE Connection is shut down
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2021-10-11 18:25:25.194
+!MESSAGE Connection is shut down
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-11 18:25:30.703
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.crt.log 1 0 2021-10-11 18:25:31.686
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-11 18:25:32.202
+!MESSAGE RedlinkServer telnet session connected on port 3025->56237 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-11 18:25:34.102
+!MESSAGE Telnet session connected on port 3330->56241 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-11 18:25:35.683
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-11 18:25:48.430
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-11 18:25:56.666
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.crt.log 1 0 2021-10-11 18:25:57.746
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-11 18:25:58.265
+!MESSAGE RedlinkServer telnet session connected on port 3025->56242 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-11 18:26:00.252
+!MESSAGE Telnet session connected on port 3330->56246 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-11 18:26:01.896
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:21.450
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:21.450
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:21.681
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:21.681
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:22.167
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:22.167
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:22.680
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:22.680
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:23.175
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:23.175
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:23.698
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:23.698
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:24.178
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:24.179
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:24.676
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:24.676
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:25.179
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:25.179
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:25.679
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:25.679
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:26.179
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:26.179
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:26.684
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:26.684
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:27.188
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:27.188
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:27.945
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:27.945
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:27.946
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:27.947
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:27.947
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:28.207
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:28.207
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:28.207
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:28.209
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:28.209
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:28.700
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:28.700
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:29.193
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:29.193
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:29.687
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:29.687
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:30.195
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:30.195
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:30.683
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:30.683
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:30.683
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:30.694
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:30.694
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:31.181
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:31.181
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:31.182
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:31.189
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:31.189
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:31.686
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:31.686
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:31.687
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:31.688
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:31.688
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:32.192
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:32.192
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:32.193
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:32.194
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:32.194
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:32.814
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:32.814
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:32.814
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:32.825
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:32.825
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:33.195
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:33.195
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:33.196
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:33.198
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:33.198
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:33.694
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:33.695
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:33.695
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:33.702
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:33.702
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:34.193
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:34.193
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:34.193
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:34.195
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:34.195
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:34.692
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:34.692
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:34.692
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:34.692
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:34.692
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:35.198
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:35.198
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:35.199
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:35.200
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:35.200
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:35.695
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:35.695
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:35.695
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:35.696
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:35.696
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:36.202
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:36.202
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:36.202
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:36.203
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:36.203
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:36.708
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:36.708
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:36.708
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:36.717
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:36.717
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:37.197
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:37.197
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:37.197
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:37.197
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:37.197
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:37.702
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:37.702
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:37.702
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:37.703
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:37.703
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:38.208
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:38.208
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:38.208
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:38.208
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:38.208
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR[1]
+Error message from debugger back end:
+-var-create: unable to create variable object
+!STACK 0
+java.lang.Exception: -var-create: unable to create variable object
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-11 18:26:38.919
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:40.486
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2021-10-11 18:26:40.486
+!MESSAGE Failed to execute MI command:
+-var-create - * LPC_CTIMER0-CR
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:26:40.894
+!MESSAGE Request for monitor: '{formatted_value_available_formats=[Ljava.lang.String;@ec75805}' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2021-10-11 18:26:40.894
+!MESSAGE Connection is shut down
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-11 18:26:48.347
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.crt.log 1 0 2021-10-11 18:26:49.352
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-11 18:26:49.871
+!MESSAGE RedlinkServer telnet session connected on port 3025->56248 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-11 18:26:51.768
+!MESSAGE Telnet session connected on port 3330->56252 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-11 18:26:53.149
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-11 18:29:20.292
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@b1ca485): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2021-10-11 18:29:20.292
+!MESSAGE Invalid context type.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2021-10-11 18:29:22.172
+!MESSAGE There is already a running debug session for the launch configuration 'TP4_capture LinkServer flash'.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-11 18:29:28.644
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.crt.log 1 0 2021-10-11 18:29:29.798
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-11 18:29:30.319
+!MESSAGE RedlinkServer telnet session connected on port 3025->59224 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-11 18:29:32.215
+!MESSAGE Telnet session connected on port 3330->59228 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-11 18:29:33.811
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-11 18:30:12.867
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml

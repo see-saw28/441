@@ -404,3 +404,89 @@ arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_
    text	   data	    bss	    dec	    hex	filename
    8008	      0	    492	   8500	   2134	TP4_capture.axf
  
+18:22:00 **** Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        8008 B      32640 B     24.53%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8008	      0	    492	   8500	   2134	TP4_capture.axf
+ 
+18:25:29 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        8008 B      32640 B     24.53%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8008	      0	    492	   8500	   2134	TP4_capture.axf
+ 
+18:25:55 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        8008 B      32640 B     24.53%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8008	      0	    492	   8500	   2134	TP4_capture.axf
+ 
+18:26:47 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+18:29:26 **** Incremental Build of configuration flash for project TP4_capture ****
+make -r -j8 all 
+Building file: ../src/capture.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP4_capture\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/capture.d" -MT"src/capture.o" -MT"src/capture.d" -o "src/capture.o" "../src/capture.c"
+../src/capture.c: In function 'main':
+../src/capture.c:78:6: warning: variable 'old_bp1' set but not used [-Wunused-but-set-variable]
+   78 |  int old_bp1=0;
+      |      ^~~~~~~
+Finished building: ../src/capture.c
+ 
+Building target: TP4_capture.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP4_capture.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP4_capture.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/capture.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        8008 B      32640 B     24.53%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: TP4_capture.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "TP4_capture.axf"; # arm-none-eabi-objcopy -v -O binary "TP4_capture.axf" "TP4_capture.bin" ; # checksum -p LPC804 -d "TP4_capture.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8008	      0	    492	   8500	   2134	TP4_capture.axf
+ 

@@ -21,8 +21,6 @@ void delay(int value){
 }
 
 int main(void) {
-	//LPC_PWRD_API→set_fro_frequency(30000);
-
 	uint32_t secondes = 0;
 
 	// Activation du périphérique d'entrées/sorties TOR
@@ -37,7 +35,7 @@ int main(void) {
 	//Initialisation de l'afficheur lcd et affichage d'un texte
 	init_lcd();
 
-
+	char snum[5];
 
 
 	while (1) {
@@ -45,13 +43,9 @@ int main(void) {
 		//Recopie de l'état du bouton 1 (P0_13) sur la LED2 (P0_17)
 		LED2 = BP1;
 
-
+		//affichage sur l'écran
 		lcd_gohome();
-		char snum[5];
-
-
-		sprintf(snum,"%d", secondes);
-
+		sprintf(snum,"%4d", secondes);
 		lcd_puts(snum);
 
 		//attente brève

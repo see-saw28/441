@@ -782,13 +782,13 @@ LOAD linker stubs
  .debug_macro   0x0000272a       0x9b C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
  .debug_macro   0x000027c5      0xa66 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
 
-.debug_line     0x00000000     0x14ad
+.debug_line     0x00000000     0x14ab
  .debug_line    0x00000000      0x13a ./src/MCUXpresso_cr_startup.o
  .debug_line    0x0000013a       0xbc ./src/MCUXpresso_crp.o
- .debug_line    0x000001f6      0x3f2 ./src/chrono.o
- .debug_line    0x000005e8      0x5a5 ./src/lib_ENS_II1_lcd.o
- .debug_line    0x00000b8d      0x46b ./src/system.o
- .debug_line    0x00000ff8      0x4b5 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
+ .debug_line    0x000001f6      0x3f0 ./src/chrono.o
+ .debug_line    0x000005e6      0x5a5 ./src/lib_ENS_II1_lcd.o
+ .debug_line    0x00000b8b      0x46b ./src/system.o
+ .debug_line    0x00000ff6      0x4b5 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
 
 .debug_str      0x00000000     0x8412
  .debug_str     0x00000000     0x2de8 ./src/MCUXpresso_cr_startup.o

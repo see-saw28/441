@@ -17,7 +17,7 @@
 //LPC_PWRD_API→set_fro_frequency(30000);
 
 int main(void) {
-	LPC_SYSCON->SYSAHBCLKCTRL0 |= (1<<25) | (SWM) | GPIO;
+	LPC_SYSCON->SYSAHBCLKCTRL0 |= CTIMER0 | (SWM) | GPIO;
 
 	//Configuration en sortie des broches P0_11, 17, 19 et 21
 	LPC_GPIO_PORT->DIR0 |= (1 << 17)|(1<<21) | (1<<19);

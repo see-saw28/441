@@ -20,6 +20,7 @@
 #include "stdio.h"
 #include "math.h"
 #include "ctimer.h"
+#include "core_cm0plus.h"
 
 #define BP1  LPC_GPIO_PORT->B0[13]
 #define BP2  LPC_GPIO_PORT->B0[12]
@@ -27,7 +28,7 @@
 #define LED2 LPC_GPIO_PORT->B0[17]
 #define LED3 LPC_GPIO_PORT->B0[21]
 #define LED4 LPC_GPIO_PORT->B0[11]
-
+#define SYSTICK_TIME (1 * 15000000) - 1 //1 secondes
 
 #define RX_BUFFER_SIZE 35
 #define WaitForUART0txRdy  while(((LPC_USART0->STAT) & (1<<2)) == 0)
@@ -84,7 +85,7 @@ int main(void) {
 	// Enable clocks to relevant peripherals
 	LPC_SYSCON->SYSAHBCLKCTRL0 |= UART0 | SWM |GPIO | CTIMER0;
 
-	LPC_GPIO_PORT->DIR0 |= (1 << 17)|(1<<21) | (1<<19);
+	LPC_GPIO_PORT->DIR0 |= (1 << 17)|(1<<21) | (1<<19)|(1<<11);
 
 	 ///////////
 	// TIMER //
@@ -94,13 +95,13 @@ int main(void) {
   	LPC_CTIMER0->PR=149;
 
   	//440Hz ie comp0 = 100 000 / 440
-  	LPC_CTIMER0->MR[3]=227;
+  	LPC_CTIMER0->MSR[3]=227;
 
   	//mise a zero par rapport à MR3
-  	LPC_CTIMER0->MCR |= (1<<MR3R);
+  	LPC_CTIMER0->MCR |= (1<<MR3R)|(1<<25)|(1<<27);
 
   	//pwm 50% pour générer un signal rectangulaire ie reglage de comp1
-  	LPC_CTIMER0->MR[1]=2;
+  	LPC_CTIMER0->MSR[1]=2;
 
   	//mat1
   	LPC_CTIMER0->PWMC = (1<<PWMEN1);
@@ -150,6 +151,12 @@ int main(void) {
 	// Enable USART0
 	LPC_USART0->CFG |= UART_EN;
 
+	//enable
+	SysTick->CTRL = (1<<SysTick_CTRL_CLKSOURCE_Pos)|(1<<SysTick_CTRL_ENABLE_Pos);
+	// Reload value
+	SysTick->LOAD = SYSTICK_TIME;
+	// Clear the counter and the countflag bit by writing any value to SysTick_VAL
+	//SysTick->VAL = 0;
 
 
 	init_lcd();
@@ -159,6 +166,8 @@ int main(void) {
 	int old_bp2=0,new_bp2=0;
 
 	char last_char=0;
+
+	int etat=0;
 
 	int note = 0;
 	float note_jouee = 440;
@@ -255,12 +264,19 @@ int main(void) {
 		lcd_puts(display);
 
 		//440Hz ie comp0 = 100 000 / 440
-		 LPC_CTIMER0->MR[3]=(int)100000/note_jouee;
+		 LPC_CTIMER0->MSR[3]=(int)100000/note_jouee;
 
 	}
 	old_bp1=new_bp1;
 	old_bp2=new_bp2;
 
+	if (SysTick->CTRL & 1<<16){
+		lcd_position(0,0);
+		sprintf(display,"%d",SysTick->VAL);
+		lcd_puts(display);
+		etat=!etat;
+	}
+	LED4=etat;
 	};
 
 } // end of main

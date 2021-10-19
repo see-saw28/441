@@ -122,11 +122,11 @@ int main(void) {
   LPC_SYSCON->PRESETCTRL0 |= ~(UART0_RST_N);
 
   // Configure the USART0 baud rate generator
-  LPC_USART0->BRG = 7;
+  LPC_USART0->BRG = 16;
 
   // Configure the USART0 CFG register:
   // 8 data bits, no parity, one stop bit, no flow control, asynchronous mode
-  LPC_USART0->CFG = DATA_LENG_8|PARITY_NONE|STOP_BIT_1;
+  LPC_USART0->CFG = DATA_LENG_8|PARITY_EVEN|STOP_BIT_1;
 
   // Configure the USART0 CTL register (nothing to be done here)
   // No continuous break, no address detect, no Tx disable, no CC, no CLRCC
@@ -154,7 +154,7 @@ int main(void) {
 	new_bp2=BP2;
 	if (new_bp1 && old_bp1==0){
 		if (LPC_USART0->STAT & TXRDY){
-			LPC_USART0->TXDAT=130;
+			LPC_USART0->TXDAT='b';
 		}
 		//PutTerminalString(LPC_USART0, (uint8_t *)"b");
 	}

@@ -1,6 +1,6 @@
-11:58:53 **** Incremental Build of configuration flash for project peripherals_lib ****
+19:18:36 **** Incremental Build of configuration flash for project peripherals_lib ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
 
-11:58:53 Build Finished. 0 errors, 0 warnings. (took 108ms)
+19:18:36 Build Finished. 0 errors, 0 warnings. (took 185ms)
 

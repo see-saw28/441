@@ -9,7 +9,9 @@
 #include "lib_ENS_II1_lcd.h"
 #include "rom_api.h"
 #include "stdio.h"
+#include "math.h"
 #include "ctimer.h"
+#include "core_cm0plus.h"
 
 #define BP1  LPC_GPIO_PORT->B0[13]
 #define BP2  LPC_GPIO_PORT->B0[12]
@@ -17,6 +19,7 @@
 #define LED2 LPC_GPIO_PORT->B0[17]
 #define LED3 LPC_GPIO_PORT->B0[21]
 #define LED4 LPC_GPIO_PORT->B0[11]
+#define SYSTICK_TIME (1 * 15000000) - 1 //1 secondes
 
 #define RX_BUFFER_SIZE 35
 #define WaitForUART0txRdy  while(((LPC_USART0->STAT) & (1<<2)) == 0)
@@ -78,55 +81,43 @@ int main(void) {
 
 
 	// Activation du périphérique d'entrées/sorties TOR, du timer et switch matrix
-	LPC_SYSCON->SYSAHBCLKCTRL0 |= (1<<25) | (SWM) | GPIO |UART0;
+	LPC_SYSCON->SYSAHBCLKCTRL0 |= UART0 | SWM |GPIO | CTIMER0;
 
-	//Configuration en sortie des broches P0_11, 17, 19 et 21
-	LPC_GPIO_PORT->DIR0 |= (1 << 11) | (1 << 17) | (1 << 19);
+	LPC_GPIO_PORT->DIR0 |= (1 << 17)|(1<<21) | (1<<19)|(1<<11);
 
-	//activation du timer
+	 ///////////
+	// TIMER //
+   ///////////
+
+  //precision 0.1 microseconde
+	LPC_CTIMER0->PR=149;
+
+	//440Hz ie comp0 = 100 000 / 440
+	LPC_CTIMER0->MSR[3]=227;
+
+	//mise a zero par rapport à MR3
+	LPC_CTIMER0->MCR |= (1<<MR3R)|(1<<25)|(1<<27);
+
+	//pwm 50% pour générer un signal rectangulaire ie reglage de comp1
+	LPC_CTIMER0->MSR[1]=2;
+
 	LPC_CTIMER0->TCR=(1<<CEN);
+	//mat1
+	LPC_CTIMER0->PWMC = (1<<PWMEN1);
 
-	//precision a la ms
-	LPC_CTIMER0->PR=14999;
+	//mat1 relié a LED1 qui est relié au HP
+	LPC_SWM->PINASSIGN4 &= ~(0xFF<<8);
+	LPC_SWM->PINASSIGN4 |= 19<<8;
 
-	//mise a zero par rapport à MR0
-	LPC_CTIMER0->MCR |= (1<<MR0R);
 
-	int tempo = 100;
-	//valeur du comparateur en fonction du tempo
-	LPC_CTIMER0->MR[0]=1000*60/tempo;
-
-	//configuration du external match register en mode toggle
-	//pour faire clignoter la led
-	LPC_CTIMER0->EMR|=(3<<4);
-
-	//configuration de la led sur MAT0 controlé par MR0
-	LPC_SWM->PINASSIGN4 &= ~(0xFF);
-	LPC_SWM->PINASSIGN4 |= 11; //metronome sur la led 3
-
+	 /////////
+	//SERIE//
+   /////////
 
 	// Connect UART0 TXD, RXD signals to port pins
 	ConfigSWM(U0_TXD, DBGTXPIN);
 	ConfigSWM(U0_RXD, DBGRXPIN);
 
-	// Configure UART0 for 9600 baud, 8 data bits, no parity, 1 stop bit.
-	// For asynchronous mode (UART mode) the formula is:
-	// (BRG + 1) * (1 + (m/256)) * (16 * baudrate Hz.) = FRG_in Hz.
-	//
-	// We proceed in 2 steps.
-	// Step 1: Let m = 0, and round (down) to the nearest integer value of BRG for the desired baudrate.
-	// Step 2: Plug in the BRG from step 1, and find the nearest integer value of m, (for the FRG fractional part).
-	//
-	// Step 1 (with m = 0)
-	// BRG = ((FRG_in Hz.) / (16 * baudrate Hz.)) - 1
-	//     = (15,000,000/(16 * 115200)) - 1
-	//     = 7
-	//
-	// Step 2.
-	// m = 256 * [-1 + {(FRG_in Hz.) / (16 * baudrate Hz.)(BRG + 1)}]
-	//   = 256 * [-1 + {(15,000,000) / (16*9600)(96+1)}]
-	//   = 1.73
-	//   = 2 (rounded)
 
 	// Configure FRG0
 	LPC_SYSCON->FRG0MULT = 0;
@@ -159,6 +150,13 @@ int main(void) {
 	// Enable USART0
 	LPC_USART0->CFG |= UART_EN;
 
+	//enable
+	SysTick->CTRL = (1<<SysTick_CTRL_CLKSOURCE_Pos)|(1<<SysTick_CTRL_ENABLE_Pos);
+	// Reload value
+	int tempo=80;
+	SysTick->LOAD = (60/tempo * 15000000) - 1;
+	// Clear the counter and the countflag bit by writing any value to SysTick_VAL
+	//SysTick->VAL = 0;
 
 	//Initialisation de l'afficheur lcd et affichage d'un texte
 	init_lcd();
@@ -169,22 +167,23 @@ int main(void) {
 
 	int ecran = 0;
 	const int nombre_pages = 5;
+	int etat_metronome=0;
 
-
+	char last_char=0;
+	int note = 0;
+	float note_jouee = 440;
 
 	int refresh = 0;
 
 	const int tempo_min = 40, tempo_max = 220;
 
-	int octave = 3;
+
+	int octave = 4;
 	const int octave_min = -1, octave_max = 9;
 
 	char display[100];
 
-
-
 	while (1) {
-
 
 		refresh = 0;
 		fm_bp1 = 0;
@@ -208,6 +207,89 @@ int main(void) {
 
 		button_bp2 = BP2;
 
+		//metronome
+		if (SysTick->CTRL & 1<<16){
+			etat_metronome=!etat_metronome;
+		}
+		LED4=etat_metronome;
+
+		//lecture clavier
+		if (LPC_USART0->STAT & RXRDY){
+
+			lcd_position(0,0);
+			last_char=LPC_USART0->RXDAT;
+
+			switch(last_char){
+				case 38 :
+					sprintf(display,"%16s","Do");
+					note = 0;
+					break;
+				case 233 :
+					sprintf(display,"%16s","Do#");
+					note = 1;
+					break;
+
+				case 34 :
+					sprintf(display,"%16s","Re");
+					note = 2;
+					break;
+
+				case 39 :
+					sprintf(display,"%16s","Re#");
+					note = 3;
+					break;
+
+				case 40 :
+					sprintf(display,"%16s","Mi");
+					note = 4;
+					break;
+
+				case 45 :
+					sprintf(display,"%16s","Fa");
+					note = 5;
+					break;
+
+				case 232 :
+					sprintf(display,"%16s","Fa#");
+					note = 6;
+					break;
+
+				case 95 :
+					sprintf(display,"%16s","Sol");
+					note = 7;
+					break;
+
+				case 231 :
+					sprintf(display,"%16s","Sol#");
+					note = 8;
+					break;
+
+				case 224 :
+					sprintf(display,"%16s","La");
+					note = 9;
+					break;
+
+				case 41 :
+					sprintf(display,"%16s","La#");
+					note = 10;
+					break;
+
+				case 61 :
+					sprintf(display,"%16s","Si");
+					note = 11;
+					break;
+
+			}
+			lcd_puts(display);
+			lcd_position(1,0);
+			note_jouee = 440 * pow(2,(float)(note-9)/12) * pow(2,octave-4);
+			sprintf(display,"%d",(int)note_jouee);
+			lcd_puts(display);
+
+			//440Hz ie comp0 = 100 000 / 440
+			 LPC_CTIMER0->MSR[3]=(int)100000/note_jouee;
+		}
+
 		//navigation
 		if (fm_bp1){
 			if (ecran<nombre_pages){
@@ -218,7 +300,6 @@ int main(void) {
 				ecran = 1;
 			}
 		}
-
 
 
 		switch(ecran){
@@ -235,7 +316,7 @@ int main(void) {
 						tempo = tempo_min;
 					}
 
-					LPC_CTIMER0->MR[0]=1000*60/tempo;
+					SysTick->LOAD = (60/tempo * 15000000) - 1;
 				}
 
 
@@ -250,6 +331,14 @@ int main(void) {
 						octave = octave_min;
 					}
 
+					lcd_position(1,0);
+					note_jouee = 440 * pow(2,(float)(note-9)/12) * pow(2,octave-4);
+					sprintf(display,"%d",(int)note_jouee);
+					lcd_puts(display);
+
+					//440Hz ie comp0 = 100 000 / 440
+					LPC_CTIMER0->MSR[3]=(int)100000/note_jouee;
+
 
 				}
 
@@ -262,9 +351,6 @@ int main(void) {
 				break;
 
 			}
-
-
-
 
 
 		//gestion affichage
@@ -299,21 +385,7 @@ int main(void) {
 
 			}
 
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
-
 
 	} // end of while(1)
 

@@ -777,3 +777,229 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2021-10-19 18:34:08.614 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2021-10-19 18:34:46.956
+!MESSAGE Recreating part support. No part support available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-10-19 18:34:57.788
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\paulg'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2021-10-19 18:43:15.852
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 18:43:16.364
+!MESSAGE RedlinkServer telnet session connected on port 3025->61383 @ 127.0.0.1
+
+!ENTRY MCUXpresso IDE 4 -1 2021-10-19 18:43:21.421
+!MESSAGE Unable to perform operation: project build failed!
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 18:45:37.657
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-19 18:45:39.818
+!MESSAGE Telnet session connected on port 3330->64758 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 18:45:43.241
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 18:47:05.335
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 18:48:52.542
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2021-10-19 18:48:54.426
+!MESSAGE There is already a running debug session for the launch configuration 'orgue LinkServer flash'.
+
+!ENTRY com.crt.log 1 0 2021-10-19 18:48:58.984
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 18:48:59.496
+!MESSAGE RedlinkServer telnet session connected on port 3025->64762 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 18:51:05.626
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-19 18:51:07.796
+!MESSAGE Telnet session connected on port 3330->64766 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 18:51:12.006
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 18:55:45.568
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-19 18:55:57.803
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 18:55:58.323
+!MESSAGE RedlinkServer telnet session connected on port 3025->51259 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 18:56:05.290
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-19 18:56:07.397
+!MESSAGE Telnet session connected on port 3330->51263 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 18:56:11.493
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY org.eclipse.debug.ui 4 120 2021-10-19 18:56:12.966
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.FutureTask.awaitDone(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.get(Unknown Source)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.runInUIThreadWithTimeout(SelectedResourceManager.java:262)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.getFromUI(SelectedResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.getActiveWindow(SelectedResourceManager.java:231)
+	at org.eclipse.debug.ui.DebugUITools.getDebugContext(DebugUITools.java:247)
+	at org.eclipse.cdt.debug.ui.editors.AbstractDebugTextHover.getSelectionAdaptable(AbstractDebugTextHover.java:508)
+	at com.nxp.mcuxpresso.core.debug.ui.NXPGdbDebugTextHover.canEvaluate(NXPGdbDebugTextHover.java:208)
+	at org.eclipse.cdt.debug.ui.editors.AbstractDebugTextHover.getHoverInfo(AbstractDebugTextHover.java:163)
+	at com.nxp.mcuxpresso.core.debug.ui.NXPGdbDebugTextHover.getHoverInfo2(NXPGdbDebugTextHover.java:303)
+	at org.eclipse.cdt.debug.internal.ui.editors.DelegatingDebugTextHover.getHoverInfo2(DelegatingDebugTextHover.java:70)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:149)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 18:57:15.929
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-19 18:58:42.776
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 18:58:43.290
+!MESSAGE RedlinkServer telnet session connected on port 3025->51264 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 18:58:50.415
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-19 18:58:52.642
+!MESSAGE Telnet session connected on port 3330->51268 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 18:58:56.960
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 18:59:34.170
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-19 19:09:18.531
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 19:09:19.051
+!MESSAGE RedlinkServer telnet session connected on port 3025->49890 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 19:09:24.513
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-19 19:09:26.644
+!MESSAGE Telnet session connected on port 3330->49894 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 19:09:30.900
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 19:10:40.476
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-19 19:10:47.098
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 19:10:47.609
+!MESSAGE RedlinkServer telnet session connected on port 3025->49901 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 19:10:52.766
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-19 19:10:54.928
+!MESSAGE Telnet session connected on port 3330->49905 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 19:10:56.350
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 19:11:22.375
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 19:11:40.755
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 19:13:30.889
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 19:14:46.170
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-19 19:14:47.269
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@368ec754): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2021-10-19 19:14:47.269
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2021-10-19 19:15:39.274
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 19:15:39.782
+!MESSAGE RedlinkServer telnet session connected on port 3025->53848 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 19:15:45.347
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-19 19:15:47.611
+!MESSAGE Telnet session connected on port 3330->53852 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 19:15:52.031
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 19:16:39.801
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-19 19:17:11.176
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 19:17:11.685
+!MESSAGE RedlinkServer telnet session connected on port 3025->53854 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 19:17:17.553
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-19 19:17:19.693
+!MESSAGE Telnet session connected on port 3330->53858 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 19:17:24.141
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 19:18:16.980
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-19 19:18:33.862
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 19:18:34.379
+!MESSAGE RedlinkServer telnet session connected on port 3025->53859 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-19 19:18:44.731
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-19 19:18:47.032
+!MESSAGE Telnet session connected on port 3330->53863 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 19:18:48.501
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml

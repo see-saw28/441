@@ -101,7 +101,7 @@ int main(void) {
 	//pwm 50% pour générer un signal rectangulaire ie reglage de comp1
 	LPC_CTIMER0->MSR[1]=2;
 
-	LPC_CTIMER0->TCR=(1<<CEN);
+	LPC_CTIMER0->TCR=0;
 	//mat1
 	LPC_CTIMER0->PWMC = (1<<PWMEN1);
 
@@ -150,13 +150,12 @@ int main(void) {
 	// Enable USART0
 	LPC_USART0->CFG |= UART_EN;
 
-	//enable
-	SysTick->CTRL = (1<<SysTick_CTRL_CLKSOURCE_Pos)|(1<<SysTick_CTRL_ENABLE_Pos);
+	//enable + clk/2 comme horloge
+	SysTick->CTRL = (1<<SysTick_CTRL_ENABLE_Pos);
 	// Reload value
 	int tempo=80;
 	SysTick->LOAD = (60/tempo * 15000000) - 1;
-	// Clear the counter and the countflag bit by writing any value to SysTick_VAL
-	//SysTick->VAL = 0;
+
 
 	//Initialisation de l'afficheur lcd et affichage d'un texte
 	init_lcd();
@@ -181,7 +180,7 @@ int main(void) {
 	int octave = 4;
 	const int octave_min = -1, octave_max = 9;
 
-	char display[100];
+	char display[100],note_en_cours[100];
 
 	while (1) {
 
@@ -210,84 +209,83 @@ int main(void) {
 		//metronome
 		if (SysTick->CTRL & 1<<16){
 			etat_metronome=!etat_metronome;
+			LPC_CTIMER0->TCR=0;
 		}
 		LED4=etat_metronome;
 
 		//lecture clavier
 		if (LPC_USART0->STAT & RXRDY){
 
-			lcd_position(0,0);
+
 			last_char=LPC_USART0->RXDAT;
 
 			switch(last_char){
 				case 38 :
-					sprintf(display,"%16s","Do");
+					sprintf(note_en_cours,"%s","Do");
 					note = 0;
 					break;
 				case 233 :
-					sprintf(display,"%16s","Do#");
+					sprintf(note_en_cours,"%s","Do#");
 					note = 1;
 					break;
 
 				case 34 :
-					sprintf(display,"%16s","Re");
+					sprintf(note_en_cours,"%s","Re");
 					note = 2;
 					break;
 
 				case 39 :
-					sprintf(display,"%16s","Re#");
+					sprintf(note_en_cours,"%s","Re#");
 					note = 3;
 					break;
 
 				case 40 :
-					sprintf(display,"%16s","Mi");
+					sprintf(note_en_cours,"%s","Mi");
 					note = 4;
 					break;
 
 				case 45 :
-					sprintf(display,"%16s","Fa");
+					sprintf(note_en_cours,"%s","Fa");
 					note = 5;
 					break;
 
 				case 232 :
-					sprintf(display,"%16s","Fa#");
+					sprintf(note_en_cours,"%s","Fa#");
 					note = 6;
 					break;
 
 				case 95 :
-					sprintf(display,"%16s","Sol");
+					sprintf(note_en_cours,"%s","Sol");
 					note = 7;
 					break;
 
 				case 231 :
-					sprintf(display,"%16s","Sol#");
+					sprintf(note_en_cours,"%s","Sol#");
 					note = 8;
 					break;
 
 				case 224 :
-					sprintf(display,"%16s","La");
+					sprintf(note_en_cours,"%s","La");
 					note = 9;
 					break;
 
 				case 41 :
-					sprintf(display,"%16s","La#");
+					sprintf(note_en_cours,"%s","La#");
 					note = 10;
 					break;
 
 				case 61 :
-					sprintf(display,"%16s","Si");
+					sprintf(note_en_cours,"%s","Si");
 					note = 11;
 					break;
 
 			}
-			lcd_puts(display);
-			lcd_position(1,0);
-			note_jouee = 440 * pow(2,(float)(note-9)/12) * pow(2,octave-4);
-			sprintf(display,"%d",(int)note_jouee);
-			lcd_puts(display);
+
+			refresh=1;
 
 			//440Hz ie comp0 = 100 000 / 440
 			 LPC_CTIMER0->MSR[3]=(int)100000/note_jouee;
+			 LPC_CTIMER0->TCR=(1<<CEN);
 		}
 
 		//navigation
@@ -316,7 +314,8 @@ int main(void) {
 						tempo = tempo_min;
 					}
 
-					SysTick->LOAD = (60/tempo * 15000000) - 1;
+					SysTick->LOAD = (int)(7500000*60/tempo - 1);
+					//SysTick->VAL = 0;
 				}
 
 
@@ -331,10 +330,7 @@ int main(void) {
 						octave = octave_min;
 					}
 
-					lcd_position(1,0);
-					note_jouee = 440 * pow(2,(float)(note-9)/12) * pow(2,octave-4);
-					sprintf(display,"%d",(int)note_jouee);
-					lcd_puts(display);
+
 
 					//440Hz ie comp0 = 100 000 / 440
 					LPC_CTIMER0->MSR[3]=(int)100000/note_jouee;
@@ -362,17 +358,12 @@ int main(void) {
 				lcd_puts("MANUEL/AUTO");
 				break;
 			case 2 :
-				lcd_puts("TEMPO");
-				lcd_position(1,0);
-				sprintf(display,"%16d", tempo);
+				sprintf(display,"TEMPO %d", tempo);
 				lcd_puts(display);
 
 				break;
 			case 3 :
-				lcd_position(0,0);
-				lcd_puts("OCTAVE");
-				lcd_position(1,0);
-				sprintf(display,"%16d", octave);
+				sprintf(display,"OCTAVE %d", octave);
 				lcd_puts(display);
 
 				break;
@@ -384,6 +375,11 @@ int main(void) {
 				break;
 
 			}
+
+			lcd_position(1,0);
+			note_jouee = 440 * pow(2,(float)(note-9)/12) * pow(2,octave-4);
+			sprintf(display,"%4s %6d",note_en_cours,(int)note_jouee);
+			lcd_puts(display);
 
 		}
 

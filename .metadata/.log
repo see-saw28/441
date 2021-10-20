@@ -1003,3 +1003,824 @@ java.lang.InterruptedException
 
 !ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-19 19:18:48.501
 !MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY org.eclipse.core.jobs 2 2 2021-10-19 19:20:25.745
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2021-10-20 18:14:03.719 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2021-10-20 18:14:45.652
+!MESSAGE Recreating part support. No part support available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-10-20 18:14:53.997
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\paulg'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.nxp.swtools.kex.api.internal.MfactApiClient 4 0 2021-10-20 18:14:54.570
+!MESSAGE [NETWORK] listComponents - unknown host mcuxpresso.nxp.com
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2021-10-20 18:14:59.159
+!MESSAGE Connection to https://mcuxpresso.nxp.com/eclipse/sdk/p2.index failed on mcuxpresso.nxp.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: mcuxpresso.nxp.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1003)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:995)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:991)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.log 4 -1 2021-10-20 18:14:59.390
+!MESSAGE Unknown Host: https://mcuxpresso.nxp.com/eclipse/sdk/artifacts.xml
+!STACK 0
+java.lang.Exception: org.eclipse.equinox.p2.core.ProvisionException: Unknown Host: https://mcuxpresso.nxp.com/eclipse/sdk/artifacts.xml
+	at com.crt.utils.general.Reporter.log(Reporter.java:580)
+	at com.nxp.mcuxpresso.core.datamodels.ui.jobs.RefreshSDKRepoJob.run(RefreshSDKRepoJob.java:256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.equinox.p2.core.ProvisionException: Unknown Host: https://mcuxpresso.nxp.com/eclipse/sdk/artifacts.xml
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:247)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.getLocalFile(SimpleArtifactRepositoryFactory.java:68)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:80)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:775)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:676)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.basicRefreshRepository(AbstractRepositoryManager.java:204)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.refreshRepository(ArtifactRepositoryManager.java:136)
+	at com.nxp.mcuxpresso.core.datamodels.ui.jobs.RefreshSDKRepoJob.run(RefreshSDKRepoJob.java:159)
+	... 1 more
+Caused by: java.net.UnknownHostException: mcuxpresso.nxp.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:248)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	... 1 more
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:15:43.488
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:15:44.016
+!MESSAGE RedlinkServer telnet session connected on port 3025->57463 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:15:48.774
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:15:50.619
+!MESSAGE Telnet session connected on port 3330->57475 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:15:51.915
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:16:15.076
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-20 18:17:10.705
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@2c2bec86): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2021-10-20 18:17:10.705
+!MESSAGE Invalid context type.
+
+!ENTRY org.eclipse.ui.console 4 0 2021-10-20 18:17:13.033
+!MESSAGE Streams are already closed.
+!STACK 0
+java.lang.IllegalStateException: Streams are already closed.
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamsClosed(IOConsolePartitioner.java:271)
+	at org.eclipse.ui.console.IOConsole.checkFinished(IOConsole.java:262)
+	at org.eclipse.ui.console.IOConsole.streamClosed(IOConsole.java:274)
+	at org.eclipse.ui.console.IOConsoleOutputStream.close(IOConsoleOutputStream.java:181)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:290)
+	at org.eclipse.ui.console.IOConsoleOutputStream.close(IOConsoleOutputStream.java:179)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:290)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:276)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:201)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:211)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.lf(MCXTelnetService.java:390)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:137)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.launchesTerminated(MCXTelnetService.java:228)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:307)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:262)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1040)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:481)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.access$1(DsfLaunch.java:1)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.lambda$1(DsfLaunch.java:47)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.run(DebugPlugin.java:1162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.async(DebugPlugin.java:1149)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:463)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.log 4 -1 2021-10-20 18:17:13.034
+!MESSAGE Document is closed
+!STACK 0
+java.lang.Exception: java.io.IOException: Document is closed
+	at com.crt.utils.general.Reporter.log(Reporter.java:580)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.lf(MCXTelnetService.java:399)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:137)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.launchesTerminated(MCXTelnetService.java:228)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:307)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:262)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1040)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:481)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.access$1(DsfLaunch.java:1)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.lambda$1(DsfLaunch.java:47)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.run(DebugPlugin.java:1162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.async(DebugPlugin.java:1149)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:463)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Document is closed
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamAppended(IOConsolePartitioner.java:690)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:281)
+	at org.eclipse.ui.console.IOConsoleOutputStream.close(IOConsoleOutputStream.java:179)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:290)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:276)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:201)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:211)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.lf(MCXTelnetService.java:390)
+	... 14 more
+
+!ENTRY org.eclipse.ui.console 4 0 2021-10-20 18:17:13.062
+!MESSAGE Streams are already closed.
+!STACK 0
+java.lang.IllegalStateException: Streams are already closed.
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamsClosed(IOConsolePartitioner.java:271)
+	at org.eclipse.ui.console.IOConsole.checkFinished(IOConsole.java:262)
+	at org.eclipse.ui.console.IOConsole.streamClosed(IOConsole.java:274)
+	at org.eclipse.ui.console.IOConsoleOutputStream.close(IOConsoleOutputStream.java:181)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:290)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:276)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:260)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.log(MCXTelnetService.java:360)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:138)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.launchesTerminated(MCXTelnetService.java:228)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:307)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:262)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1040)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:481)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.access$1(DsfLaunch.java:1)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.lambda$1(DsfLaunch.java:47)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.run(DebugPlugin.java:1162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.async(DebugPlugin.java:1149)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:463)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.log 4 -1 2021-10-20 18:17:13.063
+!MESSAGE Document is closed
+!STACK 0
+java.lang.Exception: java.io.IOException: Document is closed
+	at com.crt.utils.general.Reporter.log(Reporter.java:580)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.log(MCXTelnetService.java:366)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:138)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.launchesTerminated(MCXTelnetService.java:228)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:307)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:262)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1040)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:481)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.access$1(DsfLaunch.java:1)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.lambda$1(DsfLaunch.java:47)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.run(DebugPlugin.java:1162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.async(DebugPlugin.java:1149)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:463)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Document is closed
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamAppended(IOConsolePartitioner.java:690)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:281)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:276)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:260)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.log(MCXTelnetService.java:360)
+	... 14 more
+
+!ENTRY org.eclipse.ui.console 4 0 2021-10-20 18:17:13.068
+!MESSAGE Streams are already closed.
+!STACK 0
+java.lang.IllegalStateException: Streams are already closed.
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamsClosed(IOConsolePartitioner.java:271)
+	at org.eclipse.ui.console.IOConsole.checkFinished(IOConsole.java:262)
+	at org.eclipse.ui.console.IOConsole.streamClosed(IOConsole.java:274)
+	at org.eclipse.ui.console.IOConsoleOutputStream.close(IOConsoleOutputStream.java:181)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:290)
+	at org.eclipse.ui.console.IOConsoleOutputStream.close(IOConsoleOutputStream.java:179)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:290)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:276)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:201)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:211)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.lf(MCXTelnetService.java:390)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:137)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.launchesTerminated(MCXTelnetService.java:228)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.launchesRemoved(MCXTelnetService.java:156)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:276)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:262)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1040)
+	at org.eclipse.debug.internal.core.LaunchManager.removeLaunch(LaunchManager.java:2205)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.removeTerminatedLaunches(LaunchConfigurationManager.java:327)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.launchAdded(LaunchConfigurationManager.java:315)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.run(LaunchManager.java:427)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.notify(LaunchManager.java:417)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1029)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:680)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:764)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:718)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.log 4 -1 2021-10-20 18:17:13.069
+!MESSAGE Document is closed
+!STACK 0
+java.lang.Exception: java.io.IOException: Document is closed
+	at com.crt.utils.general.Reporter.log(Reporter.java:580)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.lf(MCXTelnetService.java:399)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:137)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.launchesTerminated(MCXTelnetService.java:228)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.launchesRemoved(MCXTelnetService.java:156)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:276)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:262)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1040)
+	at org.eclipse.debug.internal.core.LaunchManager.removeLaunch(LaunchManager.java:2205)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.removeTerminatedLaunches(LaunchConfigurationManager.java:327)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.launchAdded(LaunchConfigurationManager.java:315)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.run(LaunchManager.java:427)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.notify(LaunchManager.java:417)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1029)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:680)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:764)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:718)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Document is closed
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamAppended(IOConsolePartitioner.java:690)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:281)
+	at org.eclipse.ui.console.IOConsoleOutputStream.close(IOConsoleOutputStream.java:179)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:290)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:276)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:201)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:211)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.lf(MCXTelnetService.java:390)
+	... 20 more
+
+!ENTRY org.eclipse.ui.console 4 0 2021-10-20 18:17:13.316
+!MESSAGE Streams are already closed.
+!STACK 0
+java.lang.IllegalStateException: Streams are already closed.
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamsClosed(IOConsolePartitioner.java:271)
+	at org.eclipse.ui.console.IOConsole.checkFinished(IOConsole.java:262)
+	at org.eclipse.ui.console.IOConsole.streamClosed(IOConsole.java:274)
+	at org.eclipse.ui.console.IOConsoleOutputStream.close(IOConsoleOutputStream.java:181)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:290)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:276)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:260)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.log(MCXTelnetService.java:360)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:138)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.launchesTerminated(MCXTelnetService.java:228)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.launchesRemoved(MCXTelnetService.java:156)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:276)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:262)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1040)
+	at org.eclipse.debug.internal.core.LaunchManager.removeLaunch(LaunchManager.java:2205)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.removeTerminatedLaunches(LaunchConfigurationManager.java:327)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.launchAdded(LaunchConfigurationManager.java:315)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.run(LaunchManager.java:427)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.notify(LaunchManager.java:417)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1029)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:680)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:764)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:718)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.log 4 -1 2021-10-20 18:17:13.317
+!MESSAGE Document is closed
+!STACK 0
+java.lang.Exception: java.io.IOException: Document is closed
+	at com.crt.utils.general.Reporter.log(Reporter.java:580)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.log(MCXTelnetService.java:366)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:138)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.launchesTerminated(MCXTelnetService.java:228)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.launchesRemoved(MCXTelnetService.java:156)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:276)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:262)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1040)
+	at org.eclipse.debug.internal.core.LaunchManager.removeLaunch(LaunchManager.java:2205)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.removeTerminatedLaunches(LaunchConfigurationManager.java:327)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.launchAdded(LaunchConfigurationManager.java:315)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.run(LaunchManager.java:427)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.notify(LaunchManager.java:417)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1029)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:680)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:764)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:718)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Document is closed
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamAppended(IOConsolePartitioner.java:690)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:281)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:276)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:260)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.log(MCXTelnetService.java:360)
+	... 20 more
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:17:14.585
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:17:15.070
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:17:15.577
+!MESSAGE RedlinkServer telnet session connected on port 3025->57509 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:17:17.337
+!MESSAGE Telnet session connected on port 3330->57513 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:17:20.944
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:21:40.868
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:22:07.223
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:22:35.073
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:23:16.268
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-20 18:24:02.318
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@6e529511): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2021-10-20 18:24:02.318
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:24:12.305
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:24:12.819
+!MESSAGE RedlinkServer telnet session connected on port 3025->62895 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:24:15.461
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:24:17.293
+!MESSAGE Telnet session connected on port 3330->62899 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:24:18.390
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:24:43.627
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-20 18:25:20.894
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@4f0a06c2): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2021-10-20 18:25:20.894
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:25:28.732
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:25:29.250
+!MESSAGE RedlinkServer telnet session connected on port 3025->62901 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:25:31.953
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:25:33.751
+!MESSAGE Telnet session connected on port 3330->62905 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:25:37.683
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:27:41.949
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:27:44.341
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:27:44.344
+!MESSAGE RedlinkServer telnet session connected on port 3025->63005 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:27:47.249
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:27:48.959
+!MESSAGE Telnet session connected on port 3330->63009 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:27:50.291
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:28:34.974
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-20 18:32:10.970
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@1ed6a13d): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2021-10-20 18:32:10.970
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:32:13.980
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:32:13.982
+!MESSAGE RedlinkServer telnet session connected on port 3025->56506 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:32:16.654
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:32:18.372
+!MESSAGE Telnet session connected on port 3330->56510 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:32:19.748
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:32:46.307
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:33:01.920
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:33:02.428
+!MESSAGE RedlinkServer telnet session connected on port 3025->56514 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:33:05.046
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:33:06.850
+!MESSAGE Telnet session connected on port 3330->56518 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:33:08.132
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:33:43.952
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-20 18:33:44.880
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@72c54d95): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2021-10-20 18:33:44.880
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:34:01.301
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:34:01.807
+!MESSAGE RedlinkServer telnet session connected on port 3025->57444 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:34:04.352
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:34:06.152
+!MESSAGE Telnet session connected on port 3330->57448 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:34:07.513
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:35:51.596
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2021-10-20 18:40:22.183
+!MESSAGE There is already a running debug session for the launch configuration 'orgue LinkServer flash'.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-20 18:40:40.908
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@14ccfb87): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2021-10-20 18:40:40.908
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:43:10.624
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:43:11.140
+!MESSAGE RedlinkServer telnet session connected on port 3025->57515 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:43:13.664
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:43:15.494
+!MESSAGE Telnet session connected on port 3330->57521 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:43:17.021
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:47:29.069
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:47:33.384
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:47:33.893
+!MESSAGE RedlinkServer telnet session connected on port 3025->61752 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:47:36.418
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:47:38.224
+!MESSAGE Telnet session connected on port 3330->61756 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:47:41.966
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:52:11.482
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:52:15.975
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:52:16.348
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:52:16.859
+!MESSAGE RedlinkServer telnet session connected on port 3025->61769 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:52:18.570
+!MESSAGE Telnet session connected on port 3330->61773 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:52:22.360
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:54:04.201
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:54:43.894
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:54:44.404
+!MESSAGE RedlinkServer telnet session connected on port 3025->61295 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:54:46.891
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:54:48.728
+!MESSAGE Telnet session connected on port 3330->61299 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:54:50.616
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:55:08.585
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:55:19.624
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:55:20.130
+!MESSAGE RedlinkServer telnet session connected on port 3025->61301 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:55:22.686
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:55:24.531
+!MESSAGE Telnet session connected on port 3330->61305 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:55:26.346
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:56:45.995
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:57:04.848
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:57:05.364
+!MESSAGE RedlinkServer telnet session connected on port 3025->61317 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:57:07.844
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:57:09.659
+!MESSAGE Telnet session connected on port 3330->61321 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:57:11.396
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:57:27.028
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:58:55.830
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:58:56.342
+!MESSAGE RedlinkServer telnet session connected on port 3025->61324 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:58:59.024
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:59:00.795
+!MESSAGE Telnet session connected on port 3330->61328 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:59:04.665
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:59:25.317
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-20 18:59:40.467
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:59:40.981
+!MESSAGE RedlinkServer telnet session connected on port 3025->61330 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 18:59:43.520
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 18:59:45.348
+!MESSAGE Telnet session connected on port 3330->61334 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 18:59:46.655
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 19:01:25.163
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-20 19:01:27.702
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 19:01:28.208
+!MESSAGE RedlinkServer telnet session connected on port 3025->61337 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 19:01:30.903
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 19:01:32.731
+!MESSAGE Telnet session connected on port 3330->61342 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 19:01:36.449
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 19:02:00.273
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-20 19:05:15.177
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 19:05:15.696
+!MESSAGE RedlinkServer telnet session connected on port 3025->62485 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 19:05:18.272
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 19:05:20.074
+!MESSAGE Telnet session connected on port 3330->62489 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 19:05:23.895
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 19:05:50.868
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-20 19:06:48.705
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 19:06:49.223
+!MESSAGE RedlinkServer telnet session connected on port 3025->58076 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 19:06:51.720
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 19:06:53.548
+!MESSAGE Telnet session connected on port 3330->58080 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 19:06:55.494
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 19:07:24.925
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-20 19:07:38.017
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 19:07:38.523
+!MESSAGE RedlinkServer telnet session connected on port 3025->58082 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 19:07:41.030
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 19:07:42.805
+!MESSAGE Telnet session connected on port 3330->58086 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 19:07:44.748
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2021-10-20 19:08:38.607
+!MESSAGE There is already a running debug session for the launch configuration 'orgue LinkServer flash'.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-10-20 19:08:44.013
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@ebd4eae): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2021-10-20 19:08:44.013
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2021-10-20 19:08:48.294
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 19:08:48.807
+!MESSAGE RedlinkServer telnet session connected on port 3025->58088 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 19:08:51.106
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 19:08:52.927
+!MESSAGE Telnet session connected on port 3330->58092 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 19:08:56.629
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 19:10:32.390
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY com.crt.log 1 0 2021-10-20 19:10:36.618
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 19:10:37.134
+!MESSAGE RedlinkServer telnet session connected on port 3025->58094 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2021-10-20 19:10:39.608
+!MESSAGE cvc-complex-type.2.4.a : Contenu non valide trouvé à partir de l'élément '{"http://www.w3.org/2001/XInclude":include}'. L'une des valeurs '{include, parameters, script}' est attendue.
+
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2021-10-20 19:10:41.407
+!MESSAGE Telnet session connected on port 3330->58098 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.romtable] 0 0 2021-10-20 19:10:43.399
+!MESSAGE ROM table will not be parsed. Unable to obtain ROM table base address form file: C:\nxp\MCUXpressoIDE_11.4.1_6260\ide\plugins\com.nxp.mcuxpresso.tools.bin.win32_11.4.0.202109131312\binaries\coresight\coresightComponents.xml
+
+!ENTRY org.eclipse.core.jobs 2 2 2021-10-20 19:16:22.296
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2021-10-20 19:16:32.575 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2021-10-20 19:16:46.485
+!MESSAGE Recreating part support. No part support available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-10-20 19:16:50.921
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\paulg'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

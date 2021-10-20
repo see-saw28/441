@@ -1,6 +1,6 @@
-19:18:40 **** Incremental Build of configuration flash for project orgue ****
+19:10:39 **** Incremental Build of configuration flash for project orgue ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
 
-19:18:40 Build Finished. 0 errors, 0 warnings. (took 159ms)
+19:10:39 Build Finished. 0 errors, 0 warnings. (took 95ms)
 

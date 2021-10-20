@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="com.nxp.mcuxpresso.core.debug.ui.NXPExpressionInformationControlCreator$ExpressionInformationControl">
-		<item key="WIDTH" value="942"/>
-		<item key="HEIGHT" value="574"/>
+		<item key="WIDTH" value="970"/>
+		<item key="HEIGHT" value="636"/>
 		<item key="Sash.Weight.Tree" value="500"/>
 		<item key="Sash.Weight.Details" value="500"/>
 	</section>

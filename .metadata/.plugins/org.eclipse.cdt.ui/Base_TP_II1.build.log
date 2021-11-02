@@ -1,6 +1,6 @@
-20:39:15 **** Incremental Build of configuration flash for project Base_TP_II1 ****
+16:03:52 **** Incremental Build of configuration flash for project Base_TP_II1 ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
 
-20:39:15 Build Finished. 0 errors, 0 warnings. (took 123ms)
+16:03:52 Build Finished. 0 errors, 0 warnings. (took 105ms)
 

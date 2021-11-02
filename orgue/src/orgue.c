@@ -21,50 +21,7 @@
 #define LED4 LPC_GPIO_PORT->B0[11]
 #define SYSTICK_TIME (1 * 15000000) - 1 //1 secondes
 
-#define RX_BUFFER_SIZE 35
-#define WaitForUART0txRdy  while(((LPC_USART0->STAT) & (1<<2)) == 0)
 
-const unsigned char thestring[] = "What do you have to say for yourself now?\n\r";
-unsigned char rx_buffer[RX_BUFFER_SIZE];
-volatile enum {false, true} handshake;
-
-//
-// Function name: UART0_IRQHandler
-// Description:	  UART0 interrupt service routine.
-//                This ISR reads one received char from the UART0 RXDAT register,
-//                appends it to the rx_buffer array, and echos it back via the
-//                UART0 transmitter. If the char. is 0xD (carriage return),
-//                new line char (0xA) is appended to the array and echoed,
-//                then a NUL char (0x0) is appended to the array to terminate the string
-//                for future use.
-// Parameters:    None
-// Returns:       void
-//
-void UART0_IRQHandler() {
-  static uint32_t rx_char_counter = 0;
-  unsigned char temp;
-
-  temp = LPC_USART0->RXDAT ;
-  rx_buffer[rx_char_counter] = temp;        // Append the current character to the rx_buffer
-  WaitForUART0txRdy;                        // Wait for TXREADY
-  LPC_USART0->TXDAT  = temp;                // Echo it back to the terminal
-
-  if (temp == 0x0D) {                       // CR (carriage return) is current character. End of string.
-    rx_buffer[rx_char_counter+1] = 0x0A;    // Append a new line character to rx_buffer.
-    rx_buffer[rx_char_counter+2] = 0x00;    // Append a NUL terminator character to rx_buffer to complete the string.
-    WaitForUART0txRdy;                      // Wait for TXREADY
-    LPC_USART0->TXDAT  = 0x0A;              // Echo a NL (new line) character to the terminal.
-    handshake = true;                       // Set handshake for main()
-    rx_char_counter = 0;                    // Clear array index counter
-  }
-  else {                                    // Current character is not CR, keep collecting them.
-    rx_char_counter++;                      // Increment array index counter.
-
-    if (rx_char_counter == RX_BUFFER_SIZE)  // If the string overruns the buffer, stop here before all hell breaks lose.
-      while(1);
-  }
-  return;
-}
 
 
 void lcd_clear(){
@@ -119,13 +76,6 @@ int main(void) {
 	ConfigSWM(U0_RXD, DBGRXPIN);
 
 
-	// Configure FRG0
-	LPC_SYSCON->FRG0MULT = 0;
-	LPC_SYSCON->FRG0DIV = 255;
-
-	// Select main_clk as the source for FRG0
-	LPC_SYSCON->FRG0CLKSEL = FRGCLKSEL_MAIN_CLK;
-
 	// Select frg0clk as the source for fclk0 (to UART0)
 	LPC_SYSCON->UART0CLKSEL = FCLKSEL_FRO_CLK;
 
@@ -140,9 +90,6 @@ int main(void) {
 	// 8 data bits, no parity, one stop bit, no flow control, asynchronous mode
 	LPC_USART0->CFG = DATA_LENG_8|PARITY_NONE|STOP_BIT_1;
 
-	// Configure the USART0 CTL register (nothing to be done here)
-	// No continuous break, no address detect, no Tx disable, no CC, no CLRCC
-	LPC_USART0->CTL = 0;
 
 	// Clear any pending flags, just in case
 	LPC_USART0->STAT = 0xFFFF;
@@ -180,7 +127,7 @@ int main(void) {
 	int octave = 4;
 	const int octave_min = -1, octave_max = 9;
 
-	char display[100],note_en_cours[100];
+	char display[100],note_en_cours[100]="";
 
 	while (1) {
 
@@ -215,7 +162,6 @@ int main(void) {
 
 		//lecture clavier
 		if (LPC_USART0->STAT & RXRDY){
-
 
 			last_char=LPC_USART0->RXDAT;
 
@@ -282,10 +228,9 @@ int main(void) {
 			}
 
 			refresh=1;
-
-			//440Hz ie comp0 = 100 000 / 440
-			 LPC_CTIMER0->MSR[3]=(int)100000/note_jouee;
-			 LPC_CTIMER0->TCR=(1<<CEN);
+			note_jouee = 440 * pow(2,(float)(note-9)/12) * pow(2,octave-4);
+			LPC_CTIMER0->MSR[3]=(int)100000/note_jouee;
+			LPC_CTIMER0->TCR=(1<<CEN);
 		}
 
 		//navigation
@@ -330,12 +275,8 @@ int main(void) {
 						octave = octave_min;
 					}
 
-
-
-					//440Hz ie comp0 = 100 000 / 440
+					note_jouee = 440 * pow(2,(float)(note-9)/12) * pow(2,octave-4);
 					LPC_CTIMER0->MSR[3]=(int)100000/note_jouee;
-
-
 				}
 
 				break;
@@ -377,8 +318,7 @@ int main(void) {
 			}
 
 			lcd_position(1,0);
-			note_jouee = 440 * pow(2,(float)(note-9)/12) * pow(2,octave-4);
-			sprintf(display,"%4s %6d",note_en_cours,(int)note_jouee);
+			sprintf(display,"%4s %6dHz",note_en_cours,(int)note_jouee);
 			lcd_puts(display);
 
 		}

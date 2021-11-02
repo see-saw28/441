@@ -6,7 +6,7 @@
  * Generated linker script file for LPC804
  * Created from library.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v11.4.1 [Build 6260] [2021-09-15] on 20 oct. 2021 à 19:10:39
+ * MCUXpresso IDE v11.4.1 [Build 6260] [2021-09-15] on 20 oct. 2021 à 22:45:36
  */
 
 GROUP (

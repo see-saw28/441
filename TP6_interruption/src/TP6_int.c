@@ -30,6 +30,7 @@
 #define LED4 LPC_GPIO_PORT->B0[11]
 
 int32_t num_led = 0;
+char display[100];
 
 void allumer_led(uint32_t numero_led) {
 	switch (numero_led) {
@@ -49,7 +50,7 @@ void allumer_led(uint32_t numero_led) {
 void eteindre_led(uint32_t numero_led) {
 	switch (numero_led) {
 	case 1:
-		LED1= 0;
+		LED1 = 0;
 		break;
 		case 2: LED2 = 0;
 		break;
@@ -68,6 +69,8 @@ void PININT0_IRQHandler(void) {
 			allumer_led(num_led);
 		}
 	    LPC_PIN_INT->FALL = 1<<0;
+
+
 	}
 	return;
 }
@@ -79,6 +82,7 @@ void PININT1_IRQHandler(void) {
 			num_led--;
 		}
 	    LPC_PIN_INT->FALL = 1<<1;
+
 	}
 	return;
 }
@@ -91,40 +95,31 @@ int main(void) {
 
 	LPC_SYSCON->SYSAHBCLKCTRL0 |= UART0 | SWM |GPIO | CTIMER0 | GPIO_INT;
 
-	NVIC->ISER[0] |= 1<<23;//ISE_PININT0;
+	NVIC->ISER[0] |= 1<<24;//ISE_PININT0;
 	NVIC->IP[6] |= 0<<6; //prioritaire
 	LPC_SYSCON->PINTSEL0 = 13; //BP1
 
-	NVIC->ISER[0] |= 1<<24; //ISE_PININT1;
-	NVIC->IP[6] |= 0<<14; //moins prioritaire
-	LPC_SYSCON->PINTSEL1 = 12; //BP1
+	NVIC->ISER[0] |= 1<<25; //ISE_PININT1;
+	NVIC->IP[6] |= 1<<14; //moins prioritaire
+	LPC_SYSCON->PINTSEL1 = 12; //BP2
 
-	LPC_PIN_INT->IENF = 3; //PININT0 et PININT1
+	LPC_PIN_INT->IENF |= 3; //PININT0 et PININT1
 
 
-	/*
-	 * code assembleur pour mettre la totalité de la ram dans un état connu (OxA5 partout)
-	 * attention : à exécuter au début de main
-	 * PV 12/11/2019
 
-	asm volatile(
-			".syntax unified\n\t"
-			"ldr r4, =0x10000000\n\t"
-			"ldr r5, =0xA5A5A5A5\n\t"
-			"ldr r6, =0x10001000\n\t"
-			"bcl: str r5, [r4, #0]\n\t"
-			"adds r4,#4\n\t"
-			"cmp r4,r6\n\t"
-			"bne bcl\n\t"
-	);
-*/
+
 
 	//RAZ de la variable globale (écrasée par le code ASM)
-	num_led = 0;
+	num_led = 1;
+
 
 	//Activation de l'horloge des périphériques et configuration des sorties GPIO
 	LPC_SYSCON->SYSAHBCLKCTRL0 |= IOCON | GPIO0 | SWM | CTIMER0 | GPIO_INT; //module interruption activé aussi
 	LPC_GPIO_PORT->DIR0 |= 0x002A0800; // broches connectées aux leds en sortie
+
+	init_lcd();
+	lcd_gohome();
+	lcd_puts("UE441 - TP6");
 
 	while (1) {
 

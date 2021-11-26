@@ -1,0 +1,5 @@
+../src/lib_UE441_lcd.c:16:6:init_lcd	24	static
+../src/lib_UE441_lcd.c:100:6:lcd_puts	32	static
+../src/lib_UE441_lcd.c:117:6:lcd_putc	32	static
+../src/lib_UE441_lcd.c:129:6:lcd_gohome	24	static
+../src/lib_UE441_lcd.c:141:6:lcd_position	40	static

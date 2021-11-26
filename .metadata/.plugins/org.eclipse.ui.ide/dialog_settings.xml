@@ -6,6 +6,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP5_base\src"/>
+			<item value="C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace"/>
 			<item value="C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges"/>
 		</list>
 	</section>
@@ -16,5 +18,7 @@
 	<section name="WORKBENCH_SETTINGS">
 		<list key="ENABLED_TRANSFERS">
 		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
 	</section>
 </section>

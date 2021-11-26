@@ -1,6 +1,6 @@
-16:04:27 **** Incremental Build of configuration flash for project utilities_lib ****
+11:05:58 **** Build of configuration flash for project utilities_lib ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
 
-16:04:27 Build Finished. 0 errors, 0 warnings. (took 109ms)
+11:05:58 Build Finished. 0 errors, 0 warnings. (took 112ms)
 

@@ -272,8 +272,8 @@ int main(void) {
 
 	if (SysTick->CTRL & 1<<16){
 		lcd_position(0,0);
-		sprintf(display,"%d",SysTick->VAL);
-		lcd_puts(display);
+		//sprintf(display,"%d",SysTick->VAL);
+		//lcd_puts(display);
 		etat=!etat;
 	}
 	LED4=etat;

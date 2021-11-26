@@ -23,7 +23,7 @@ int main(void) {
 	//chrono initialement actif
 	LPC_CTIMER0->TCR=(1<<CEN);
 	//precision à la milliseconde
-	LPC_CTIMER0->PR=14999;
+	LPC_CTIMER0->PR=11;
 
 	int bp1_state = 0,bp2_state = 0, old_timer = 0;//memorisation
 	char snum[100];//affichage

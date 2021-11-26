@@ -1,0 +1,9 @@
+../src/cr_startup_lpc80x.c:225:6:data_init	8	static
+../src/cr_startup_lpc80x.c:234:6:bss_init	0	static
+../src/cr_startup_lpc80x.c:261:1:ResetISR	8	static
+../src/cr_startup_lpc80x.c:328:6:NMI_Handler	0	static
+../src/cr_startup_lpc80x.c:333:6:HardFault_Handler	0	static
+../src/cr_startup_lpc80x.c:338:6:SVC_Handler	0	static
+../src/cr_startup_lpc80x.c:343:6:PendSV_Handler	0	static
+../src/cr_startup_lpc80x.c:348:6:SysTick_Handler	0	static
+../src/cr_startup_lpc80x.c:359:6:IntDefaultHandler	0	static

@@ -36,10 +36,16 @@ void lcd_clear(){
 
 void MRT_IRQHandler(void){
 
-	LED2=!LED2;
+	if (LPC_MRT->Channel[0].STAT & 1<<0){
+		LED2=!LED2;
+		LPC_MRT->Channel[0].STAT |=1;
+	}
 
+	if (LPC_MRT->Channel[1].STAT & 1<<0){
+			LPC_ADC->SEQA_CTRL|=1<<31|1<<26;
+			LPC_MRT->Channel[1].STAT |=1;
+		}
 
-	LPC_MRT->Channel[0].STAT |=1;
 }
 
 int main(void) {
@@ -47,7 +53,7 @@ int main(void) {
 
 
 	// Activation du périphérique d'entrées/sorties TOR, du timer et switch matrix
-	LPC_SYSCON->SYSAHBCLKCTRL0 |= UART0 | SWM |GPIO | CTIMER0 | MRT | IOCON;
+	LPC_SYSCON->SYSAHBCLKCTRL0 |= UART0 | SWM |GPIO | CTIMER0 | MRT | IOCON |ADC;
 
 	LPC_GPIO_PORT->DIR0 |= (1 << 17)|(1<<21) | (1<<19)|(1<<11);
 
@@ -137,11 +143,26 @@ int main(void) {
 	// Enable the MRT interrupt in the NVIC
 	//NVIC->ISER[0] |= 1<<10;
 
+	//chrono lecture potentiometre toutes les 10ms
+	LPC_MRT->Channel[1].INTVAL = 150000;
+
+	// Mode = repeat, interrupt = enable
+	LPC_MRT->Channel[1].CTRL = (MRT_Repeat<<MRT_MODE) | (1<<MRT_INTEN);
+
 	NVIC_EnableIRQ(MRT_IRQn);
 	NVIC->IP[2] &= ~(0x00C00000);
 
+	 /////////
+	// ADC //
+   /////////
 
+	LPC_SYSCON->PDRUNCFG &=~(ADC_PD);
+	LPC_SYSCON->ADCCLKDIV = 1;
+	LPC_SYSCON->ADCCLKSEL = 0;
+	LPC_SWM->PINENABLE0 &=~(ADC_8);
+	LPC_IOCON->PIO0_15 = 0;
 
+	LPC_ADC->SEQA_CTRL|=1<<8|1<<18;
 
 
 
@@ -152,7 +173,7 @@ int main(void) {
 	int button_bp1 = 0, new_bp1 = 0, fm_bp1 = 0;
 	int button_bp2 = 0, new_bp2 = 0, fm_bp2 = 0;
 
-	int ecran = 0;
+	int ecran = 0, old_ecran = 0;
 	const int nombre_pages = 5;
 	int etat_metronome=0;
 
@@ -175,6 +196,8 @@ int main(void) {
 	const int octave_min = -1, octave_max = 9;
 
 	char display[100],note_en_cours[100]="";
+
+	int adc = 0;
 
 	while (1) {
 
@@ -291,8 +314,25 @@ int main(void) {
 
 		}
 
+		//lecture potentiometre
+		if (LPC_ADC->SEQA_GDAT & (1<<31)){
+			adc = (LPC_ADC->SEQA_GDAT & 0xFFF0)>>4;
+
+
+			LPC_ADC->SEQA_CTRL&=~(1<<31);
+		}
+
+		ecran = 1 + adc/(4095/nombre_pages);
+
+		if (ecran>nombre_pages){
+			ecran=5;
+		}
+		if (ecran != old_ecran){
+			refresh=1;
+		}
+		old_ecran = ecran;
 		//navigation
-		if (fm_bp1){
+		/*if (fm_bp1){
 			if (ecran<nombre_pages){
 				ecran++;
 			}
@@ -300,7 +340,7 @@ int main(void) {
 			else {
 				ecran = 1;
 			}
-		}
+		}*/
 
 
 		switch(ecran){

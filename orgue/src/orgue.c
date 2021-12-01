@@ -39,7 +39,7 @@ void MRT_IRQHandler(void){
 	LED2=!LED2;
 
 
-	LPC_MRT->Channel[0].STAT |=0;
+	LPC_MRT->Channel[0].STAT |=1;
 }
 
 int main(void) {
@@ -127,16 +127,21 @@ int main(void) {
 	// Give the module a reset
     LPC_SYSCON->PRESETCTRL0 &= (MRT_RST_N);
     LPC_SYSCON->PRESETCTRL0 |= ~(MRT_RST_N);
+
+    //tempo metronome
+	int tempo=80;
+	LPC_MRT->Channel[0].INTVAL = (uint32_t) (60.0/tempo * 15000000);
+
 	// Mode = repeat, interrupt = enable
 	LPC_MRT->Channel[0].CTRL = (MRT_Repeat<<MRT_MODE) | (1<<MRT_INTEN);
 	// Enable the MRT interrupt in the NVIC
-	NVIC->ISER[0] |= 1<<10;
-	NVIC_EnableIRQ(MRT_IRQn);
+	//NVIC->ISER[0] |= 1<<10;
 
-	//tempo metronome
-	int tempo=80;
-	LPC_MRT->Channel[0].INTVAL = (int)(60/tempo * 15000000);
-	LPC_MRT->Channel[0].INTVAL |= 1<<31;
+	NVIC_EnableIRQ(MRT_IRQn);
+	NVIC->IP[2] &= ~(0x00C00000);
+
+
+
 
 
 
@@ -323,8 +328,7 @@ int main(void) {
 						tempo = tempo_min;
 					}
 //MRT
-					LPC_MRT->Channel[0].INTVAL |= (60/tempo * 15000000);
-					LPC_MRT->Channel[0].INTVAL |= 1<<31;
+					LPC_MRT->Channel[0].INTVAL = (uint32_t) (60.0/tempo * 15000000);
 				}
 
 

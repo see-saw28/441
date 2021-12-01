@@ -1,4 +1,4 @@
-11:05:57 **** Build of configuration flash for project peripherals_lib ****
+11:33:59 **** Incremental Build of configuration flash for project peripherals_lib ****
 make -r -j8 all 
 Building file: ../src/i2c.c
 Invoking: MCU C Compiler
@@ -8,6 +8,7 @@ Finished building: ../src/i2c.c
 Building target: libperipherals_lib.a
 Invoking: MCU Archiver
 arm-none-eabi-ar -r  "libperipherals_lib.a"  ./src/gpio.o ./src/i2c.o ./src/plu.o ./src/spi.o ./src/swm.o ./src/syscon.o   
+arm-none-eabi-ar: creating libperipherals_lib.a
 Finished building target: libperipherals_lib.a
  
 make --no-print-directory post-build
@@ -15,12 +16,12 @@ Performing post-build steps
 arm-none-eabi-size "libperipherals_lib.a" ; # arm-none-eabi-objdump -h -S "libperipherals_lib.a" >"libperipherals_lib.lss"
    text	   data	    bss	    dec	    hex	filename
     278	      0	      0	    278	    116	gpio.o (ex libperipherals_lib.a)
-    540	      0	      0	    540	    21c	i2c.o (ex libperipherals_lib.a)
+    568	      0	      0	    568	    238	i2c.o (ex libperipherals_lib.a)
     140	      0	      0	    140	     8c	plu.o (ex libperipherals_lib.a)
     784	      0	      8	    792	    318	spi.o (ex libperipherals_lib.a)
     276	      0	      0	    276	    114	swm.o (ex libperipherals_lib.a)
     332	      0	      0	    332	    14c	syscon.o (ex libperipherals_lib.a)
  
 
-11:05:57 Build Finished. 0 errors, 0 warnings. (took 529ms)
+11:34:02 Build Finished. 0 errors, 0 warnings. (took 2s.837ms)
 

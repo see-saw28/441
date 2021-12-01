@@ -209,6 +209,8 @@ Discarded input sections
  .text          0x00000000        0x0 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
  .data          0x00000000        0x0 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
  .bss           0x00000000        0x0 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
+ .text.I2CmasterRead
+                0x00000000       0x98 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
  .text.I2CmasterWriteRead
                 0x00000000       0xc8 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
  .text.WaitI2CSlaveState
@@ -716,23 +718,23 @@ END GROUP
 OUTPUT(TP3_timer.axf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x00000000     0x2584
+.debug_info     0x00000000     0x25ee
  .debug_info    0x00000000      0x232 ./src/MCUXpresso_cr_startup.o
  .debug_info    0x00000232       0x40 ./src/MCUXpresso_crp.o
- .debug_info    0x00000272      0xb4b ./src/chrono.o
- .debug_info    0x00000dbd      0xbe6 ./src/lib_ENS_II1_lcd.o
- .debug_info    0x000019a3      0x8a1 ./src/system.o
- .debug_info    0x00002244      0x340 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
+ .debug_info    0x00000272      0xb59 ./src/chrono.o
+ .debug_info    0x00000dcb      0xbe6 ./src/lib_ENS_II1_lcd.o
+ .debug_info    0x000019b1      0x8a1 ./src/system.o
+ .debug_info    0x00002252      0x39c C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
 
-.debug_abbrev   0x00000000      0x810
+.debug_abbrev   0x00000000      0x821
  .debug_abbrev  0x00000000      0x122 ./src/MCUXpresso_cr_startup.o
  .debug_abbrev  0x00000122       0x38 ./src/MCUXpresso_crp.o
  .debug_abbrev  0x0000015a      0x1a9 ./src/chrono.o
  .debug_abbrev  0x00000303      0x1ff ./src/lib_ENS_II1_lcd.o
  .debug_abbrev  0x00000502      0x1ae ./src/system.o
- .debug_abbrev  0x000006b0      0x160 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
+ .debug_abbrev  0x000006b0      0x171 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
 
-.debug_aranges  0x00000000      0x138
+.debug_aranges  0x00000000      0x140
  .debug_aranges
                 0x00000000       0x60 ./src/MCUXpresso_cr_startup.o
  .debug_aranges
@@ -744,14 +746,14 @@ LOAD linker stubs
  .debug_aranges
                 0x000000d8       0x28 ./src/system.o
  .debug_aranges
-                0x00000100       0x38 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
+                0x00000100       0x40 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
 
-.debug_ranges   0x00000000       0xd0
+.debug_ranges   0x00000000       0xd8
  .debug_ranges  0x00000000       0x50 ./src/MCUXpresso_cr_startup.o
  .debug_ranges  0x00000050       0x10 ./src/chrono.o
  .debug_ranges  0x00000060       0x30 ./src/lib_ENS_II1_lcd.o
  .debug_ranges  0x00000090       0x18 ./src/system.o
- .debug_ranges  0x000000a8       0x28 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
+ .debug_ranges  0x000000a8       0x30 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
 
 .debug_macro    0x00000000     0x322b
  .debug_macro   0x00000000       0x1d ./src/MCUXpresso_cr_startup.o
@@ -783,15 +785,15 @@ LOAD linker stubs
  .debug_macro   0x0000272a       0x9b C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
  .debug_macro   0x000027c5      0xa66 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
 
-.debug_line     0x00000000     0x145d
+.debug_line     0x00000000     0x14d5
  .debug_line    0x00000000      0x13a ./src/MCUXpresso_cr_startup.o
  .debug_line    0x0000013a       0xbc ./src/MCUXpresso_crp.o
  .debug_line    0x000001f6      0x3b0 ./src/chrono.o
  .debug_line    0x000005a6      0x59e ./src/lib_ENS_II1_lcd.o
  .debug_line    0x00000b44      0x464 ./src/system.o
- .debug_line    0x00000fa8      0x4b5 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
+ .debug_line    0x00000fa8      0x52d C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
 
-.debug_str      0x00000000     0x83f3
+.debug_str      0x00000000     0x840a
  .debug_str     0x00000000     0x2de1 ./src/MCUXpresso_cr_startup.o
                                0x2df4 (size before relaxing)
  .debug_str     0x00002de1       0xf4 ./src/MCUXpresso_crp.o
@@ -802,8 +804,8 @@ LOAD linker stubs
                                0x7497 (size before relaxing)
  .debug_str     0x00007afd      0x802 ./src/system.o
                                0x72e1 (size before relaxing)
- .debug_str     0x000082ff       0xf4 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
-                               0x6688 (size before relaxing)
+ .debug_str     0x000082ff      0x10b C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
+                               0x669f (size before relaxing)
 
 .comment        0x00000000       0x4d
  .comment       0x00000000       0x4d ./src/MCUXpresso_cr_startup.o
@@ -917,9 +919,9 @@ LOAD linker stubs
  .ARM.attributes
                 0x000005f7       0x1c c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_semihost.a(__sys_write.o)
 
-.debug_frame    0x00000000      0x2d8
+.debug_frame    0x00000000      0x2f8
  .debug_frame   0x00000000      0x118 ./src/MCUXpresso_cr_startup.o
  .debug_frame   0x00000118       0x30 ./src/chrono.o
  .debug_frame   0x00000148       0xb0 ./src/lib_ENS_II1_lcd.o
  .debug_frame   0x000001f8       0x50 ./src/system.o
- .debug_frame   0x00000248       0x90 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)
+ .debug_frame   0x00000248       0xb0 C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash\libperipherals_lib.a(i2c.o)

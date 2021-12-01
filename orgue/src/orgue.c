@@ -12,6 +12,7 @@
 #include "math.h"
 #include "ctimer.h"
 #include "core_cm0plus.h"
+#include "mrt.h"
 
 #define BP1  LPC_GPIO_PORT->B0[13]
 #define BP2  LPC_GPIO_PORT->B0[12]
@@ -19,7 +20,7 @@
 #define LED2 LPC_GPIO_PORT->B0[17]
 #define LED3 LPC_GPIO_PORT->B0[21]
 #define LED4 LPC_GPIO_PORT->B0[11]
-#define SYSTICK_TIME (1 * 15000000) - 1 //1 secondes
+
 
 
 
@@ -33,15 +34,25 @@ void lcd_clear(){
 
 }
 
+void MRT_IRQHandler(void){
+
+	LED2=!LED2;
+
+
+	LPC_MRT->Channel[0].STAT |=0;
+}
+
 int main(void) {
 	LPC_PWRD_API->set_fro_frequency(30000);
 
 
 	// Activation du périphérique d'entrées/sorties TOR, du timer et switch matrix
-	LPC_SYSCON->SYSAHBCLKCTRL0 |= UART0 | SWM |GPIO | CTIMER0;
+	LPC_SYSCON->SYSAHBCLKCTRL0 |= UART0 | SWM |GPIO | CTIMER0 | MRT | IOCON;
 
 	LPC_GPIO_PORT->DIR0 |= (1 << 17)|(1<<21) | (1<<19)|(1<<11);
 
+	LED1=1;
+	LED2=0;
 	 ///////////
 	// TIMER //
    ///////////
@@ -55,7 +66,7 @@ int main(void) {
 	//mise a zero par rapport à MR3
 	LPC_CTIMER0->MCR |= (1<<MR3R)|(1<<25)|(1<<27);
 
-	//pwm 50% pour générer un signal rectangulaire ie reglage de comp1
+	//pwm pour générer un signal rectangulaire ie reglage de comp1
 	LPC_CTIMER0->MSR[1]=2;
 
 	LPC_CTIMER0->TCR=0;
@@ -97,19 +108,44 @@ int main(void) {
 	// Enable USART0
 	LPC_USART0->CFG |= UART_EN;
 
+	 ///////////
+	//SYSTICK//
+   ///////////
+
 	//enable + clk/2 comme horloge
 	SysTick->CTRL = (1<<SysTick_CTRL_ENABLE_Pos);
 	// Reload value
+	//longueur des note en ms
+	int longueur = 500;
+	SysTick->LOAD = 7500*longueur - 1;
+
+
+	 /////////
+	// MRT //
+   /////////
+
+	// Give the module a reset
+    LPC_SYSCON->PRESETCTRL0 &= (MRT_RST_N);
+    LPC_SYSCON->PRESETCTRL0 |= ~(MRT_RST_N);
+	// Mode = repeat, interrupt = enable
+	LPC_MRT->Channel[0].CTRL = (MRT_Repeat<<MRT_MODE) | (1<<MRT_INTEN);
+	// Enable the MRT interrupt in the NVIC
+	NVIC->ISER[0] |= 1<<10;
+	NVIC_EnableIRQ(MRT_IRQn);
+
+	//tempo metronome
 	int tempo=80;
-	SysTick->LOAD = (60/tempo * 15000000) - 1;
+	LPC_MRT->Channel[0].INTVAL = (int)(60/tempo * 15000000);
+	LPC_MRT->Channel[0].INTVAL |= 1<<31;
+
 
 
 	//Initialisation de l'afficheur lcd et affichage d'un texte
 	init_lcd();
 
 
-	int button_bp1 = 0, fm_bp1 = 0;
-	int button_bp2 = 0, fm_bp2 = 0;
+	int button_bp1 = 0, new_bp1 = 0, fm_bp1 = 0;
+	int button_bp2 = 0, new_bp2 = 0, fm_bp2 = 0;
 
 	int ecran = 0;
 	const int nombre_pages = 5;
@@ -121,8 +157,14 @@ int main(void) {
 
 	int refresh = 0;
 
+	int volume = 2;
+	const int volume_min = 1, volume_max = 5;
+	int volumes[5] = {1,2,3,5,20};
+
 	const int tempo_min = 40, tempo_max = 220;
 
+
+	const int longueur_min = 100, longueur_max = 1000;
 
 	int octave = 4;
 	const int octave_min = -1, octave_max = 9;
@@ -131,34 +173,40 @@ int main(void) {
 
 	while (1) {
 
+		LED3=LED2;
+		LED4=LED2;
+
 		refresh = 0;
 		fm_bp1 = 0;
 		fm_bp2 = 0;
 
+		new_bp1=BP1;
+		new_bp2=BP2;
+
 
 		//lecture bouton
-		if ((BP1==0)&&(button_bp1==1)){
+		if ((new_bp1==0)&&(button_bp1==1)){
 			fm_bp1=1;
 			refresh = 1;
 
 
 		}
 
-		button_bp1 = BP1;
+		button_bp1 = new_bp1;
 
-		if ((BP2==0)&&(button_bp2==1)){
+		if ((new_bp2==0)&&(button_bp2==1)){
 			fm_bp2 = 1;
 			refresh = 1;
 		}
 
-		button_bp2 = BP2;
+		button_bp2 = new_bp2;
 
-		//metronome
+		//longueur notes
 		if (SysTick->CTRL & 1<<16){
-			etat_metronome=!etat_metronome;
 			LPC_CTIMER0->TCR=0;
+			SysTick->CTRL = (0<<SysTick_CTRL_ENABLE_Pos);
 		}
-		LED4=etat_metronome;
+		//LED4=etat_metronome;
 
 		//lecture clavier
 		if (LPC_USART0->STAT & RXRDY){
@@ -231,6 +279,11 @@ int main(void) {
 			note_jouee = 440 * pow(2,(float)(note-9)/12) * pow(2,octave-4);
 			LPC_CTIMER0->MSR[3]=(int)100000/note_jouee;
 			LPC_CTIMER0->TCR=(1<<CEN);
+
+			//activation systick + reset
+			SysTick->CTRL = (1<<SysTick_CTRL_ENABLE_Pos);
+			SysTick->VAL = 0;
+
 		}
 
 		//navigation
@@ -247,7 +300,18 @@ int main(void) {
 
 		switch(ecran){
 			case 1 :
+				if (fm_bp2){
+					if (longueur < longueur_max){
+						longueur += 100;
+					}
 
+					else {
+						longueur = longueur_min;
+					}
+					//longueur en ms
+					SysTick->LOAD = 7500*longueur - 1;
+					//SysTick->VAL = 0;
+				}
 				break;
 			case 2 :
 				if (fm_bp2){
@@ -258,9 +322,9 @@ int main(void) {
 					else {
 						tempo = tempo_min;
 					}
-
-					SysTick->LOAD = (int)(7500000*60/tempo - 1);
-					//SysTick->VAL = 0;
+//MRT
+					LPC_MRT->Channel[0].INTVAL |= (60/tempo * 15000000);
+					LPC_MRT->Channel[0].INTVAL |= 1<<31;
 				}
 
 
@@ -281,6 +345,17 @@ int main(void) {
 
 				break;
 			case 4 :
+				if (fm_bp2){
+					if (volume < volume_max){
+						volume += 1;
+					}
+
+					else {
+						volume = volume_min;
+					}
+					//reglage pwm pour jouer sur le volume
+					LPC_CTIMER0->MSR[1]=volumes[volume];
+				}
 
 				break;
 			case 5 :
@@ -296,7 +371,8 @@ int main(void) {
 			lcd_clear();
 			switch(ecran){
 			case 1 :
-				lcd_puts("MANUEL/AUTO");
+				sprintf(display,"TEMPS NOTE %d", longueur);
+				lcd_puts(display);
 				break;
 			case 2 :
 				sprintf(display,"TEMPO %d", tempo);
@@ -309,7 +385,8 @@ int main(void) {
 
 				break;
 			case 4 :
-				lcd_puts("VOLUME");
+				sprintf(display,"VOLUME %d", volume);
+				lcd_puts(display);
 				break;
 			case 5 :
 				lcd_puts("SELECTION MUSIQUE");

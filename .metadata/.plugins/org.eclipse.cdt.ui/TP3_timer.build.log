@@ -1,6 +1,6 @@
-19:51:50 **** Incremental Build of configuration flash for project TP3_timer ****
+10:17:06 **** Incremental Build of configuration flash for project TP3_timer ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
 
-19:51:50 Build Finished. 0 errors, 0 warnings. (took 97ms)
+10:17:06 Build Finished. 0 errors, 0 warnings. (took 112ms)
 

@@ -1,244 +1,73 @@
-14:21:00 **** Incremental Build of configuration flash for project peripherals_lib ****
+11:38:46 **** Incremental Build of configuration flash for project peripherals_lib ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-14:21:00 **** Incremental Build of configuration flash for project utilities_lib ****
+11:38:46 **** Incremental Build of configuration flash for project utilities_lib ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-14:21:00 **** Incremental Build of configuration flash for project TP8_I2C ****
+11:38:46 **** Build of configuration flash for project Analog_Comparator ****
 make -r -j8 all 
-Building file: ../src/TP8.c
+Building file: ../src/Analog_Comparator.c
+Building file: ../src/MCUXpresso_Retarget.c
+Building file: ../src/MCUXpresso_cr_startup.c
+Building file: ../src/MCUXpresso_crp.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP8_I2C\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP8.d" -MT"src/TP8.o" -MT"src/TP8.d" -o "src/TP8.o" "../src/TP8.c"
-../src/TP8.c: In function 'SysTick_Handler':
-../src/TP8.c:137:12: warning: unused variable 'temp' [-Wunused-variable]
-  137 |   uint32_t temp = SysTick->CTRL;
-      |            ^~~~
-../src/TP8.c: In function 'main':
-../src/TP8.c:144:7: warning: unused variable 'text' [-Wunused-variable]
-  144 |  char text[17]; // une ligne + \0
-      |       ^~~~
-Finished building: ../src/TP8.c
- 
-Building target: TP8_I2C.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP8_I2C.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP8_I2C.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP8.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
-Memory region         Used Size  Region Size  %age Used
-        MFlash32:        4828 B      32640 B     14.79%
-         RamLoc4:         492 B         4 KB     12.01%
-Finished building target: TP8_I2C.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "TP8_I2C.axf"; # arm-none-eabi-objcopy -v -O binary "TP8_I2C.axf" "TP8_I2C.bin" ; # checksum -p LPC804 -d "TP8_I2C.bin";
-   text	   data	    bss	    dec	    hex	filename
-   4828	      0	    492	   5320	   14c8	TP8_I2C.axf
- 
-14:21:12 **** Incremental Build of configuration flash for project peripherals_lib ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-14:21:12 **** Incremental Build of configuration flash for project utilities_lib ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-14:21:12 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-14:21:13 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-14:24:33 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-14:25:00 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-14:26:24 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-08:26:37 **** Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-Building target: TP8_I2C.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP8_I2C.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP8_I2C.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP8.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
-Memory region         Used Size  Region Size  %age Used
-        MFlash32:        4828 B      32640 B     14.79%
-         RamLoc4:         492 B         4 KB     12.01%
-Finished building target: TP8_I2C.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "TP8_I2C.axf"; # arm-none-eabi-objcopy -v -O binary "TP8_I2C.axf" "TP8_I2C.bin" ; # checksum -p LPC804 -d "TP8_I2C.bin";
-   text	   data	    bss	    dec	    hex	filename
-   4828	      0	    492	   5320	   14c8	TP8_I2C.axf
- 
-08:29:08 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-10:36:25 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-Building target: TP8_I2C.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP8_I2C.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP8_I2C.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP8.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
-Memory region         Used Size  Region Size  %age Used
-        MFlash32:        4828 B      32640 B     14.79%
-         RamLoc4:         492 B         4 KB     12.01%
-Finished building target: TP8_I2C.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "TP8_I2C.axf"; # arm-none-eabi-objcopy -v -O binary "TP8_I2C.axf" "TP8_I2C.bin" ; # checksum -p LPC804 -d "TP8_I2C.bin";
-   text	   data	    bss	    dec	    hex	filename
-   4828	      0	    492	   5320	   14c8	TP8_I2C.axf
- 
-10:37:02 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-10:46:10 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-10:46:41 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-Building file: ../src/TP8.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP8_I2C\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP8.d" -MT"src/TP8.o" -MT"src/TP8.d" -o "src/TP8.o" "../src/TP8.c"
-../src/TP8.c: In function 'SysTick_Handler':
-../src/TP8.c:137:12: warning: unused variable 'temp' [-Wunused-variable]
-  137 |   uint32_t temp = SysTick->CTRL;
-      |            ^~~~
-../src/TP8.c: In function 'main':
-../src/TP8.c:144:7: warning: unused variable 'text' [-Wunused-variable]
-  144 |  char text[17]; // une ligne + \0
-      |       ^~~~
-Finished building: ../src/TP8.c
- 
-Building target: TP8_I2C.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP8_I2C.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP8_I2C.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP8.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
-Memory region         Used Size  Region Size  %age Used
-        MFlash32:        4820 B      32640 B     14.77%
-         RamLoc4:         492 B         4 KB     12.01%
-Finished building target: TP8_I2C.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "TP8_I2C.axf"; # arm-none-eabi-objcopy -v -O binary "TP8_I2C.axf" "TP8_I2C.bin" ; # checksum -p LPC804 -d "TP8_I2C.bin";
-   text	   data	    bss	    dec	    hex	filename
-   4820	      0	    492	   5312	   14c0	TP8_I2C.axf
- 
-10:52:13 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-Building file: ../src/TP8.c
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\Analog_Comparator\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/Analog_Comparator.d" -MT"src/Analog_Comparator.o" -MT"src/Analog_Comparator.d" -o "src/Analog_Comparator.o" "../src/Analog_Comparator.c"
+Building file: ../src/MCUXpresso_mtb.c
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\Analog_Comparator\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\commoInvoking: MCU C Compiler
+n\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/MCUXpresso_Retarget.d" -MT"src/MCUXpresso_Retarget.o" -MT"src/MCUXpresso_Retarget.d" -o "src/MCUXpresso_Retarget.o" "../src/MCUXpresso_Retarget.c"
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP8_I2C\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP8.d" -MT"src/TP8.o" -MT"src/TP8.d" -o "src/TP8.o" "../src/TP8.c"
-../src/TP8.c: In function 'MCP23_read_reg':
-../src/TP8.c:64:2: warning: implicit declaration of function 'I2CmasterRead'; did you mean 'I2CmasterWriteRead'? [-Wimplicit-function-declaration]
-   64 |  I2CmasterRead( MCP23_I2C_AD, I2CSlaveBuffer, I2CReadLength );
-      |  ^~~~~~~~~~~~~
-      |  I2CmasterWriteRead
-../src/TP8.c: In function 'SysTick_Handler':
-../src/TP8.c:137:12: warning: unused variable 'temp' [-Wunused-variable]
-  137 |   uint32_t temp = SysTick->CTRL;
-      |            ^~~~
-../src/TP8.c: In function 'main':
-../src/TP8.c:144:7: warning: unused variable 'text' [-Wunused-variable]
-  144 |  char text[17]; // une ligne + \0
-      |       ^~~~
-Finished building: ../src/TP8.c
- 
-Building target: TP8_I2C.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP8_I2C.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP8_I2C.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP8.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
-Memory region         Used Size  Region Size  %age Used
-        MFlash32:        4780 B      32640 B     14.64%
-         RamLoc4:         492 B         4 KB     12.01%
-Finished building target: TP8_I2C.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "TP8_I2C.axf"; # arm-none-eabi-objcopy -v -O binary "TP8_I2C.axf" "TP8_I2C.bin" ; # checksum -p LPC804 -d "TP8_I2C.bin";
-   text	   data	    bss	    dec	    hex	filename
-   4780	      0	    492	   5272	   1498	TP8_I2C.axf
- 
-10:52:52 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-10:53:33 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-10:54:01 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-10:54:51 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-Building target: TP8_I2C.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP8_I2C.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP8_I2C.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP8.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
-Memory region         Used Size  Region Size  %age Used
-        MFlash32:        4780 B      32640 B     14.64%
-         RamLoc4:         492 B         4 KB     12.01%
-Finished building target: TP8_I2C.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "TP8_I2C.axf"; # arm-none-eabi-objcopy -v -O binary "TP8_I2C.axf" "TP8_I2C.bin" ; # checksum -p LPC804 -d "TP8_I2C.bin";
-   text	   data	    bss	    dec	    hex	filename
-   4780	      0	    492	   5272	   1498	TP8_I2C.axf
- 
-10:55:24 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-10:56:32 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-10:56:52 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-10:57:55 **** Incremental Build of configuration flash for project TP8_I2C ****
-make -r -j8 all 
-Building file: ../src/TP8.c
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\Analog_Comparator\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/MCUXpresso_cr_startup.d" -MT"src/MCUXpresso_cr_startup.o" -MT"src/MCUXpresso_cr_startup.d" -o "src/MCUXpresso_cr_startup.o" "../src/MCUXpresso_cr_startup.c"
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\Analog_Comparator\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/MCUXpresso_crp.d" -MT"src/MCUXpresso_crp.o" -MT"src/MCUXpresso_crp.d" -o "src/MCUXpresso_crp.o" "../src/MCUXpresso_crp.c"
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP8_I2C\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP8.d" -MT"src/TP8.o" -MT"src/TP8.d" -o "src/TP8.o" "../src/TP8.c"
-../src/TP8.c: In function 'MCP23_read_reg':
-../src/TP8.c:64:2: warning: implicit declaration of function 'I2CmasterRead'; did you mean 'I2CmasterWriteRead'? [-Wimplicit-function-declaration]
-   64 |  I2CmasterRead( MCP23_I2C_AD, I2CSlaveBuffer, I2CReadLength );
-      |  ^~~~~~~~~~~~~
-      |  I2CmasterWriteRead
-../src/TP8.c: In function 'SysTick_Handler':
-../src/TP8.c:137:12: warning: unused variable 'temp' [-Wunused-variable]
-  137 |   uint32_t temp = SysTick->CTRL;
-      |            ^~~~
-../src/TP8.c: In function 'main':
-../src/TP8.c:144:7: warning: unused variable 'text' [-Wunused-variable]
-  144 |  char text[17]; // une ligne + \0
-      |       ^~~~
-Finished building: ../src/TP8.c
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\Analog_Comparator\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/MCUXpresso_mtb.d" -MT"src/MCUXpresso_mtb.o" -MT"src/MCUXpresso_mtb.d" -o "src/MCUXpresso_mtb.o" "../src/MCUXpresso_mtb.c"
+Building file: ../src/Serial.c
+Building file: ../src/system.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\Analog_Comparator\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/Serial.d" -MT"src/Serial.o" -MT"src/Serial.d" -o "src/Serial.o" "../src/Serial.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\Analog_Comparator\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/system.d" -MT"src/system.o" -MT"src/system.d" -o "src/system.o" "../src/system.c"
+Finished building: ../src/MCUXpresso_Retarget.c
+Finished building: ../src/Analog_Comparator.c
+Finished building: ../src/MCUXpresso_cr_startup.c
+Finished building: ../src/MCUXpresso_crp.c
+Finished building: ../src/MCUXpresso_mtb.c
  
-Building target: TP8_I2C.axf
+ 
+ 
+ 
+ 
+Finished building: ../src/Serial.c
+ 
+Finished building: ../src/system.c
+ 
+Building target: Analog_Comparator.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP8_I2C.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP8_I2C.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP8.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="Analog_Comparator.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Analog_Comparator_flash.ld" -o "Analog_Comparator.axf"  ./src/Analog_Comparator.o ./src/MCUXpresso_Retarget.o ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/Serial.o ./src/system.o   -lperipherals_lib -lutilities_lib
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:        4780 B      32640 B     14.64%
-         RamLoc4:         492 B         4 KB     12.01%
-Finished building target: TP8_I2C.axf
+        MFlash32:       14556 B      32640 B     44.60%
+         RamLoc4:         220 B         4 KB      5.37%
+Finished building target: Analog_Comparator.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "TP8_I2C.axf"; # arm-none-eabi-objcopy -v -O binary "TP8_I2C.axf" "TP8_I2C.bin" ; # checksum -p LPC804 -d "TP8_I2C.bin";
+arm-none-eabi-size "Analog_Comparator.axf"; # arm-none-eabi-objcopy -v -O binary "Analog_Comparator.axf" "Analog_Comparator.bin" ; # checksum -p LPC804 -d "Analog_Comparator.bin";
    text	   data	    bss	    dec	    hex	filename
-   4780	      0	    492	   5272	   1498	TP8_I2C.axf
+  14528	     28	    192	  14748	   399c	Analog_Comparator.axf
  
-10:58:40 **** Incremental Build of configuration flash for project TP8_I2C ****
+11:38:55 **** Incremental Build of configuration flash for project peripherals_lib ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-11:00:48 **** Incremental Build of configuration flash for project TP8_I2C ****
+11:38:55 **** Incremental Build of configuration flash for project utilities_lib ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-11:01:33 **** Incremental Build of configuration flash for project TP8_I2C ****
+11:38:55 **** Incremental Build of configuration flash for project Analog_Comparator ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-11:02:03 **** Incremental Build of configuration flash for project TP8_I2C ****
+11:38:56 **** Incremental Build of configuration flash for project Analog_Comparator ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-11:05:57 **** Build of configuration flash for project peripherals_lib ****
+11:33:59 **** Incremental Build of configuration flash for project peripherals_lib ****
 make -r -j8 all 
 Building file: ../src/i2c.c
 Invoking: MCU C Compiler
@@ -248,6 +77,7 @@ Finished building: ../src/i2c.c
 Building target: libperipherals_lib.a
 Invoking: MCU Archiver
 arm-none-eabi-ar -r  "libperipherals_lib.a"  ./src/gpio.o ./src/i2c.o ./src/plu.o ./src/spi.o ./src/swm.o ./src/syscon.o   
+arm-none-eabi-ar: creating libperipherals_lib.a
 Finished building target: libperipherals_lib.a
  
 make --no-print-directory post-build
@@ -255,243 +85,774 @@ Performing post-build steps
 arm-none-eabi-size "libperipherals_lib.a" ; # arm-none-eabi-objdump -h -S "libperipherals_lib.a" >"libperipherals_lib.lss"
    text	   data	    bss	    dec	    hex	filename
     278	      0	      0	    278	    116	gpio.o (ex libperipherals_lib.a)
-    540	      0	      0	    540	    21c	i2c.o (ex libperipherals_lib.a)
+    568	      0	      0	    568	    238	i2c.o (ex libperipherals_lib.a)
     140	      0	      0	    140	     8c	plu.o (ex libperipherals_lib.a)
     784	      0	      8	    792	    318	spi.o (ex libperipherals_lib.a)
     276	      0	      0	    276	    114	swm.o (ex libperipherals_lib.a)
     332	      0	      0	    332	    14c	syscon.o (ex libperipherals_lib.a)
  
-11:05:58 **** Build of configuration flash for project utilities_lib ****
+11:34:02 **** Incremental Build of configuration flash for project utilities_lib ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-11:05:58 **** Build of configuration flash for project TP6_interruption ****
+11:34:03 **** Incremental Build of configuration flash for project orgue ****
 make -r -j8 all 
-Building target: TP6_interruption.axf
+Building target: orgue.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP6_interruption.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP6_interruption.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP6_int.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:        2868 B      32640 B      8.79%
-         RamLoc4:         488 B         4 KB     11.91%
-Finished building target: TP6_interruption.axf
+        MFlash32:       14956 B      32640 B     45.82%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "TP6_interruption.axf"; # arm-none-eabi-objcopy -v -O binary "TP6_interruption.axf" "TP6_interruption.bin" ; # checksum -p LPC804 -d "TP6_interruption.bin";
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
    text	   data	    bss	    dec	    hex	filename
-   2868	      0	    488	   3356	    d1c	TP6_interruption.axf
+  14956	      0	    492	  15448	   3c58	orgue.axf
  
-11:05:59 **** Incremental Build of configuration flash for project TP6_interruption ****
+11:34:04 **** Incremental Build of configuration flash for project orgue ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-11:14:54 **** Incremental Build of configuration flash for project TP6_interruption ****
+11:36:04 **** Incremental Build of configuration flash for project orgue ****
 make -r -j8 all 
-Building file: ../src/TP6_int.c
+Building file: ../src/orgue.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP6_interruption\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP6_int.d" -MT"src/TP6_int.o" -MT"src/TP6_int.d" -o "src/TP6_int.o" "../src/TP6_int.c"
-../src/TP6_int.c: In function 'PININT0_IRQHandler':
-../src/TP6_int.c:72:14: error: 'display' undeclared (first use in this function)
-   72 |      sprintf(display,"%d",num_led);
-      |              ^~~~~~~
-../src/TP6_int.c:72:14: note: each undeclared identifier is reported only once for each function it appears in
-../src/TP6_int.c: In function 'PININT1_IRQHandler':
-../src/TP6_int.c:87:11: error: 'display' undeclared (first use in this function)
-   87 |   sprintf(display,"%d",num_led);
-      |           ^~~~~~~
-../src/TP6_int.c: In function 'main':
-../src/TP6_int.c:133:7: warning: unused variable 'display' [-Wunused-variable]
-  133 |  char display[100];
-      |       ^~~~~~~
-make: *** [src/subdir.mk:35: src/TP6_int.o] Error 1
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:132:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  132 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       14956 B      32640 B     45.82%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14956	      0	    492	  15448	   3c58	orgue.axf
+ 
+11:48:42 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:133:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  133 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15084 B      32640 B     46.21%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15084	      0	    492	  15576	   3cd8	orgue.axf
+ 
+11:49:21 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:133:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  133 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15084 B      32640 B     46.21%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15084	      0	    492	  15576	   3cd8	orgue.axf
+ 
+11:55:19 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:133:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  133 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15092 B      32640 B     46.24%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15092	      0	    492	  15584	   3ce0	orgue.axf
+ 
+11:57:28 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:121:35: error: 'tempo' undeclared (first use in this function)
+  121 |  LPC_MRT->Channel[0].INTVAL = (60/tempo * 15000000) - 1;
+      |                                   ^~~~~
+../src/orgue.c:121:35: note: each undeclared identifier is reported only once for each function it appears in
+../src/orgue.c:134:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  134 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:35: src/orgue.o] Error 1
 "make -r -j8 all" terminated with exit code 2. Build might be incomplete.
-11:15:54 **** Incremental Build of configuration flash for project TP6_interruption ****
+11:57:57 **** Incremental Build of configuration flash for project orgue ****
 make -r -j8 all 
-Building file: ../src/TP6_int.c
+Building file: ../src/orgue.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP6_interruption\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP6_int.d" -MT"src/TP6_int.o" -MT"src/TP6_int.d" -o "src/TP6_int.o" "../src/TP6_int.c"
-Finished building: ../src/TP6_int.c
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:136:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  136 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
  
-Building target: TP6_interruption.axf
+Building target: orgue.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP6_interruption.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP6_interruption.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP6_int.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:        8468 B      32640 B     25.94%
-         RamLoc4:         596 B         4 KB     14.55%
-Finished building target: TP6_interruption.axf
+        MFlash32:       15076 B      32640 B     46.19%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "TP6_interruption.axf"; # arm-none-eabi-objcopy -v -O binary "TP6_interruption.axf" "TP6_interruption.bin" ; # checksum -p LPC804 -d "TP6_interruption.bin";
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
    text	   data	    bss	    dec	    hex	filename
-   8468	      0	    596	   9064	   2368	TP6_interruption.axf
+  15076	      0	    492	  15568	   3cd0	orgue.axf
  
-11:18:15 **** Incremental Build of configuration flash for project TP6_interruption ****
+12:05:22 **** Incremental Build of configuration flash for project orgue ****
 make -r -j8 all 
-Building file: ../src/TP6_int.c
+Building file: ../src/orgue.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP6_interruption\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP6_int.d" -MT"src/TP6_int.o" -MT"src/TP6_int.d" -o "src/TP6_int.o" "../src/TP6_int.c"
-Finished building: ../src/TP6_int.c
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:143:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  143 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
  
-Building target: TP6_interruption.axf
+Building target: orgue.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP6_interruption.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP6_interruption.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP6_int.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:        8468 B      32640 B     25.94%
-         RamLoc4:         596 B         4 KB     14.55%
-Finished building target: TP6_interruption.axf
+        MFlash32:       15076 B      32640 B     46.19%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "TP6_interruption.axf"; # arm-none-eabi-objcopy -v -O binary "TP6_interruption.axf" "TP6_interruption.bin" ; # checksum -p LPC804 -d "TP6_interruption.bin";
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
    text	   data	    bss	    dec	    hex	filename
-   8468	      0	    596	   9064	   2368	TP6_interruption.axf
+  15076	      0	    492	  15568	   3cd0	orgue.axf
  
-11:18:54 **** Incremental Build of configuration flash for project TP6_interruption ****
-make -r -j8 all 
-Building file: ../src/TP6_int.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP6_interruption\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP6_int.d" -MT"src/TP6_int.o" -MT"src/TP6_int.d" -o "src/TP6_int.o" "../src/TP6_int.c"
-Finished building: ../src/TP6_int.c
- 
-Building target: TP6_interruption.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP6_interruption.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP6_interruption.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP6_int.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
-Memory region         Used Size  Region Size  %age Used
-        MFlash32:        8468 B      32640 B     25.94%
-         RamLoc4:         596 B         4 KB     14.55%
-Finished building target: TP6_interruption.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "TP6_interruption.axf"; # arm-none-eabi-objcopy -v -O binary "TP6_interruption.axf" "TP6_interruption.bin" ; # checksum -p LPC804 -d "TP6_interruption.bin";
-   text	   data	    bss	    dec	    hex	filename
-   8468	      0	    596	   9064	   2368	TP6_interruption.axf
- 
-11:20:54 **** Incremental Build of configuration flash for project TP6_interruption ****
+12:08:01 **** Incremental Build of configuration flash for project orgue ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-11:23:18 **** Incremental Build of configuration flash for project TP6_interruption ****
+12:10:34 **** Incremental Build of configuration flash for project orgue ****
 make -r -j8 all 
-Building file: ../src/TP6_int.c
+Building file: ../src/orgue.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP6_interruption\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP6_int.d" -MT"src/TP6_int.o" -MT"src/TP6_int.d" -o "src/TP6_int.o" "../src/TP6_int.c"
-Finished building: ../src/TP6_int.c
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:143:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  143 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
  
-Building target: TP6_interruption.axf
+Building target: orgue.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP6_interruption.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP6_interruption.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP6_int.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:        8364 B      32640 B     25.63%
-         RamLoc4:         496 B         4 KB     12.11%
-Finished building target: TP6_interruption.axf
+        MFlash32:       15076 B      32640 B     46.19%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "TP6_interruption.axf"; # arm-none-eabi-objcopy -v -O binary "TP6_interruption.axf" "TP6_interruption.bin" ; # checksum -p LPC804 -d "TP6_interruption.bin";
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
    text	   data	    bss	    dec	    hex	filename
-   8364	      0	    496	   8860	   229c	TP6_interruption.axf
+  15076	      0	    492	  15568	   3cd0	orgue.axf
  
-11:25:07 **** Incremental Build of configuration flash for project TP6_interruption ****
+12:14:32 **** Incremental Build of configuration flash for project orgue ****
 make -r -j8 all 
-Building file: ../src/TP6_int.c
+Building file: ../src/orgue.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP6_interruption\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP6_int.d" -MT"src/TP6_int.o" -MT"src/TP6_int.d" -o "src/TP6_int.o" "../src/TP6_int.c"
-Finished building: ../src/TP6_int.c
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:143:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  143 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
  
-Building target: TP6_interruption.axf
+Building target: orgue.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP6_interruption.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP6_interruption.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP6_int.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:        3832 B      32640 B     11.74%
-         RamLoc4:         488 B         4 KB     11.91%
-Finished building target: TP6_interruption.axf
+        MFlash32:       15076 B      32640 B     46.19%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "TP6_interruption.axf"; # arm-none-eabi-objcopy -v -O binary "TP6_interruption.axf" "TP6_interruption.bin" ; # checksum -p LPC804 -d "TP6_interruption.bin";
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
    text	   data	    bss	    dec	    hex	filename
-   3832	      0	    488	   4320	   10e0	TP6_interruption.axf
+  15076	      0	    492	  15568	   3cd0	orgue.axf
  
-11:27:47 **** Incremental Build of configuration flash for project TP6_interruption ****
+12:16:38 **** Incremental Build of configuration flash for project orgue ****
 make -r -j8 all 
-Building file: ../src/TP6_int.c
+Building file: ../src/orgue.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP6_interruption\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP6_int.d" -MT"src/TP6_int.o" -MT"src/TP6_int.d" -o "src/TP6_int.o" "../src/TP6_int.c"
-Finished building: ../src/TP6_int.c
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:143:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  143 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
  
-Building target: TP6_interruption.axf
+Building target: orgue.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP6_interruption.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP6_interruption.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP6_int.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:        3844 B      32640 B     11.78%
-         RamLoc4:         488 B         4 KB     11.91%
-Finished building target: TP6_interruption.axf
+        MFlash32:       15076 B      32640 B     46.19%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "TP6_interruption.axf"; # arm-none-eabi-objcopy -v -O binary "TP6_interruption.axf" "TP6_interruption.bin" ; # checksum -p LPC804 -d "TP6_interruption.bin";
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
    text	   data	    bss	    dec	    hex	filename
-   3844	      0	    488	   4332	   10ec	TP6_interruption.axf
+  15076	      0	    492	  15568	   3cd0	orgue.axf
  
-11:28:15 **** Incremental Build of configuration flash for project TP6_interruption ****
+12:27:21 **** Incremental Build of configuration flash for project orgue ****
 make -r -j8 all 
-Building file: ../src/TP6_int.c
+Building file: ../src/orgue.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP6_interruption\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP6_int.d" -MT"src/TP6_int.o" -MT"src/TP6_int.d" -o "src/TP6_int.o" "../src/TP6_int.c"
-Finished building: ../src/TP6_int.c
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:145:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  145 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
  
-Building target: TP6_interruption.axf
+Building target: orgue.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP6_interruption.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP6_interruption.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP6_int.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:        3940 B      32640 B     12.07%
-         RamLoc4:         488 B         4 KB     11.91%
-Finished building target: TP6_interruption.axf
+        MFlash32:       15108 B      32640 B     46.29%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "TP6_interruption.axf"; # arm-none-eabi-objcopy -v -O binary "TP6_interruption.axf" "TP6_interruption.bin" ; # checksum -p LPC804 -d "TP6_interruption.bin";
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
    text	   data	    bss	    dec	    hex	filename
-   3940	      0	    488	   4428	   114c	TP6_interruption.axf
+  15108	      0	    492	  15600	   3cf0	orgue.axf
  
-11:30:00 **** Incremental Build of configuration flash for project TP6_interruption ****
+12:28:45 **** Incremental Build of configuration flash for project orgue ****
 make -r -j8 all 
-Building file: ../src/TP6_int.c
+Building file: ../src/orgue.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP6_interruption\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP6_int.d" -MT"src/TP6_int.o" -MT"src/TP6_int.d" -o "src/TP6_int.o" "../src/TP6_int.c"
-Finished building: ../src/TP6_int.c
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:145:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  145 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
  
-Building target: TP6_interruption.axf
+Building target: orgue.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP6_interruption.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP6_interruption.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP6_int.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:        3940 B      32640 B     12.07%
-         RamLoc4:         488 B         4 KB     11.91%
-Finished building target: TP6_interruption.axf
+        MFlash32:       15140 B      32640 B     46.38%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "TP6_interruption.axf"; # arm-none-eabi-objcopy -v -O binary "TP6_interruption.axf" "TP6_interruption.bin" ; # checksum -p LPC804 -d "TP6_interruption.bin";
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
    text	   data	    bss	    dec	    hex	filename
-   3940	      0	    488	   4428	   114c	TP6_interruption.axf
+  15140	      0	    492	  15632	   3d10	orgue.axf
  
-11:56:22 **** Incremental Build of configuration flash for project TP6_interruption ****
+12:29:32 **** Incremental Build of configuration flash for project orgue ****
 make -r -j8 all 
-Building file: ../src/TP6_int.c
+Building file: ../src/orgue.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\TP6_interruption\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/TP6_int.d" -MT"src/TP6_int.o" -MT"src/TP6_int.d" -o "src/TP6_int.o" "../src/TP6_int.c"
-Finished building: ../src/TP6_int.c
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:145:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  145 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
  
-Building target: TP6_interruption.axf
+Building target: orgue.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="TP6_interruption.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "TP6_interruption.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/TP6_int.o ./src/lib_ENS_II1_lcd.o ./src/system.o   -lperipherals_lib -lutilities_lib
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:        3940 B      32640 B     12.07%
-         RamLoc4:         488 B         4 KB     11.91%
-Finished building target: TP6_interruption.axf
+        MFlash32:       15140 B      32640 B     46.38%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "TP6_interruption.axf"; # arm-none-eabi-objcopy -v -O binary "TP6_interruption.axf" "TP6_interruption.bin" ; # checksum -p LPC804 -d "TP6_interruption.bin";
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
    text	   data	    bss	    dec	    hex	filename
-   3940	      0	    488	   4428	   114c	TP6_interruption.axf
+  15140	      0	    492	  15632	   3d10	orgue.axf
+ 
+12:31:51 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:145:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  145 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15164 B      32640 B     46.46%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15164	      0	    492	  15656	   3d28	orgue.axf
+ 
+12:35:05 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:145:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  145 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15228 B      32640 B     46.65%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15228	      0	    492	  15720	   3d68	orgue.axf
+ 
+12:38:06 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:149:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  149 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15268 B      32640 B     46.78%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15268	      0	    492	  15760	   3d90	orgue.axf
+ 
+12:39:30 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:150:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  150 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15284 B      32640 B     46.83%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15284	      0	    492	  15776	   3da0	orgue.axf
+ 
+12:42:46 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:152:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  152 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15284 B      32640 B     46.83%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15284	      0	    492	  15776	   3da0	orgue.axf
+ 
+12:43:45 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:152:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  152 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15284 B      32640 B     46.83%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15284	      0	    492	  15776	   3da0	orgue.axf
+ 
+12:47:24 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:152:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  152 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15284 B      32640 B     46.83%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15284	      0	    492	  15776	   3da0	orgue.axf
+ 
+12:47:56 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:152:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  152 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15284 B      32640 B     46.83%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15284	      0	    492	  15776	   3da0	orgue.axf
+ 
+12:48:19 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:152:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  152 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15284 B      32640 B     46.83%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15284	      0	    492	  15776	   3da0	orgue.axf
+ 
+12:48:45 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:152:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  152 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15284 B      32640 B     46.83%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15284	      0	    492	  15776	   3da0	orgue.axf
+ 
+12:49:12 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:152:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  152 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15284 B      32640 B     46.83%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15284	      0	    492	  15776	   3da0	orgue.axf
+ 
+12:49:30 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:152:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  152 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15284 B      32640 B     46.83%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15284	      0	    492	  15776	   3da0	orgue.axf
+ 
+12:49:53 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:152:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  152 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15284 B      32640 B     46.83%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15284	      0	    492	  15776	   3da0	orgue.axf
+ 
+12:50:18 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:152:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  152 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15284 B      32640 B     46.83%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15284	      0	    492	  15776	   3da0	orgue.axf
+ 
+12:58:00 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:152:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  152 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15540 B      32640 B     47.61%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15540	      0	    492	  16032	   3ea0	orgue.axf
+ 
+12:59:04 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:152:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  152 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15540 B      32640 B     47.61%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15540	      0	    492	  16032	   3ea0	orgue.axf
+ 
+13:00:16 **** Incremental Build of configuration flash for project orgue ****
+make -r -j8 all 
+Building file: ../src/orgue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"C:\Users\paulg\Documents\MCUXpressoIDE_11.4.1_6260\workspace\orgue\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\inc" -I"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/orgue.d" -MT"src/orgue.o" -MT"src/orgue.d" -o "src/orgue.o" "../src/orgue.c"
+../src/orgue.c: In function 'main':
+../src/orgue.c:152:6: warning: unused variable 'etat_metronome' [-Wunused-variable]
+  152 |  int etat_metronome=0;
+      |      ^~~~~~~~~~~~~~
+Finished building: ../src/orgue.c
+ 
+Building target: orgue.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\peripherals_lib\flash" -L"C:\Users\paulg\Downloads\bibliotheques_exemples_NXP_pour_LPC804_corriges\utilities_lib\flash" -Xlinker -Map="orgue.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "Multi_Timer_Blinky_flash.ld" -o "orgue.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/lib_ENS_II1_lcd.o ./src/orgue.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       15540 B      32640 B     47.61%
+         RamLoc4:         492 B         4 KB     12.01%
+Finished building target: orgue.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "orgue.axf"; # arm-none-eabi-objcopy -v -O binary "orgue.axf" "orgue.bin" ; # checksum -p LPC804 -d "orgue.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15540	      0	    492	  16032	   3ea0	orgue.axf
  

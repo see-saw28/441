@@ -1,0 +1,325 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(__weak__main.o)
+                              ./src/cr_startup_lpc80x.o (__main)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 ./src/aeabi_romdiv_patch.o
+ .data          0x00000000        0x0 ./src/aeabi_romdiv_patch.o
+ .bss           0x00000000        0x0 ./src/aeabi_romdiv_patch.o
+ .text.__aeabi_idiv
+                0x00000000       0x10 ./src/aeabi_romdiv_patch.o
+ .text.__aeabi_uidiv
+                0x00000000       0x10 ./src/aeabi_romdiv_patch.o
+ .debug_line    0x00000000       0x65 ./src/aeabi_romdiv_patch.o
+ .debug_info    0x00000000       0x22 ./src/aeabi_romdiv_patch.o
+ .debug_abbrev  0x00000000       0x12 ./src/aeabi_romdiv_patch.o
+ .debug_aranges
+                0x00000000       0x28 ./src/aeabi_romdiv_patch.o
+ .debug_str     0x00000000       0x7c ./src/aeabi_romdiv_patch.o
+ .debug_ranges  0x00000000       0x20 ./src/aeabi_romdiv_patch.o
+ .ARM.attributes
+                0x00000000       0x1c ./src/aeabi_romdiv_patch.o
+ .data          0x00000000        0x0 ./src/clignotant.o
+ .bss           0x00000000        0x0 ./src/clignotant.o
+ .group         0x00000000        0xc ./src/clignotant_asm.o
+ .group         0x00000000        0xc ./src/clignotant_asm.o
+ .group         0x00000000        0xc ./src/clignotant_asm.o
+ .group         0x00000000        0xc ./src/clignotant_asm.o
+ .group         0x00000000        0xc ./src/clignotant_asm.o
+ .group         0x00000000        0xc ./src/clignotant_asm.o
+ .group         0x00000000        0xc ./src/clignotant_asm.o
+ .group         0x00000000        0xc ./src/clignotant_asm.o
+ .group         0x00000000        0xc ./src/clignotant_asm.o
+ .group         0x00000000        0xc ./src/clignotant_asm.o
+ .text          0x00000000        0x0 ./src/clignotant_asm.o
+ .data          0x00000000        0x0 ./src/clignotant_asm.o
+ .bss           0x00000000        0x0 ./src/clignotant_asm.o
+ .group         0x00000000        0xc ./src/cr_startup_lpc80x.o
+ .text          0x00000000        0x0 ./src/cr_startup_lpc80x.o
+ .data          0x00000000        0x0 ./src/cr_startup_lpc80x.o
+ .bss           0x00000000        0x0 ./src/cr_startup_lpc80x.o
+ .debug_macro   0x00000000      0xa60 ./src/cr_startup_lpc80x.o
+ .group         0x00000000        0xc ./src/crp.o
+ .group         0x00000000        0xc ./src/crp.o
+ .text          0x00000000        0x0 ./src/crp.o
+ .data          0x00000000        0x0 ./src/crp.o
+ .bss           0x00000000        0x0 ./src/crp.o
+ .debug_macro   0x00000000      0xa60 ./src/crp.o
+ .text          0x00000000        0x0 c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(__weak__main.o)
+ .data          0x00000000        0x0 c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(__weak__main.o)
+ .bss           0x00000000        0x0 c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(__weak__main.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+MFlash32         0x00000000         0x00007f80         xr
+RamLoc4          0x10000000         0x00001000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./src/aeabi_romdiv_patch.o
+LOAD ./src/clignotant.o
+LOAD ./src/clignotant_asm.o
+LOAD ./src/cr_startup_lpc80x.o
+LOAD ./src/crp.o
+START GROUP
+LOAD c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a
+LOAD c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp\libcr_eabihelpers.a
+LOAD c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp\libgcc.a
+END GROUP
+                0x00000000                __base_MFlash32 = 0x0
+                0x00000000                __base_Flash = 0x0
+                0x00007f80                __top_MFlash32 = 0x7f80
+                0x00007f80                __top_Flash = 0x7f80
+                0x10000000                __base_RamLoc4 = 0x10000000
+                0x10000000                __base_RAM = 0x10000000
+                0x10001000                __top_RamLoc4 = 0x10001000
+                0x10001000                __top_RAM = 0x10001000
+
+.text           0x00000000      0x360
+ FILL mask 0xff
+                0x00000000                __vectors_start__ = ABSOLUTE (.)
+ *(.isr_vector)
+ .isr_vector    0x00000000       0xc0 ./src/cr_startup_lpc80x.o
+                0x00000000                g_pfnVectors
+                0x000000c0                . = ALIGN (0x4)
+                0x000000c0                __section_table_start = .
+                0x000000c0                __data_section_table = .
+                0x000000c0        0x4 LONG 0x360 LOADADDR (.data)
+                0x000000c4        0x4 LONG 0x10000000 ADDR (.data)
+                0x000000c8        0x4 LONG 0x0 SIZEOF (.data)
+                0x000000cc                __data_section_table_end = .
+                0x000000cc                __bss_section_table = .
+                0x000000cc        0x4 LONG 0x10000000 ADDR (.bss)
+                0x000000d0        0x4 LONG 0x8 SIZEOF (.bss)
+                0x000000d4                __bss_section_table_end = .
+                0x000000d4                __section_table_end = .
+ *(.after_vectors*)
+ .after_vectors
+                0x000000d4       0x90 ./src/cr_startup_lpc80x.o
+                0x000000d4                data_init
+                0x000000e6                bss_init
+                0x000000f6                ResetISR
+                0x00000158                NMI_Handler
+                0x0000015a                HardFault_Handler
+                0x0000015c                SVC_Handler
+                0x0000015e                PendSV_Handler
+                0x00000160                SysTick_Handler
+                0x00000162                PININT1_IRQHandler
+                0x00000162                PININT2_IRQHandler
+                0x00000162                MRT_IRQHandler
+                0x00000162                I2C1_IRQHandler
+                0x00000162                UART1_IRQHandler
+                0x00000162                WKT_IRQHandler
+                0x00000162                UART0_IRQHandler
+                0x00000162                I2C0_IRQHandler
+                0x00000162                IntDefaultHandler
+                0x00000162                ADC_OVR_IRQHandler
+                0x00000162                PININT7_IRQHandler
+                0x00000162                PININT3_IRQHandler
+                0x00000162                PININT5_IRQHandler
+                0x00000162                PININT4_IRQHandler
+                0x00000162                ADC_THCMP_IRQHandler
+                0x00000162                PININT0_IRQHandler
+                0x00000162                BOD_IRQHandler
+                0x00000162                WDT_IRQHandler
+                0x00000162                ADC_SEQB_IRQHandler
+                0x00000162                ADC_SEQA_IRQHandler
+                0x00000162                DAC0_IRQHandler
+                0x00000162                PININT6_IRQHandler
+                0x00000162                SPI0_IRQHandler
+                0x00000162                CMP_IRQHandler
+                0x00000162                FLASH_IRQHandler
+                0x00000162                CTIMER0_IRQHandler
+                0x000002fc                . = 0x2fc
+ *fill*         0x00000164      0x198 ff
+                0x000002fc                PROVIDE (__CRP_WORD_START__ = .)
+ *(.crp)
+ .crp           0x000002fc        0x4 ./src/crp.o
+                0x000002fc                CRP_WORD
+                0x00000300                PROVIDE (__CRP_WORD_END__ = .)
+                0x00000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
+ *(.text*)
+ .text          0x00000300       0x1c ./src/clignotant.o
+                0x00000300                main2
+ .text.main     0x0000031c       0x3c ./src/clignotant_asm.o
+                0x0000031c                main
+ .text.__weak_main
+                0x00000358        0x8 c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(__weak__main.o)
+                0x00000358                __weak_main
+                0x00000358                __main
+ *(.rodata .rodata.* .constdata .constdata.*)
+                0x00000360                . = ALIGN (0x4)
+
+.glue_7         0x00000360        0x0
+ .glue_7        0x00000360        0x0 linker stubs
+
+.glue_7t        0x00000360        0x0
+ .glue_7t       0x00000360        0x0 linker stubs
+
+.vfp11_veneer   0x00000360        0x0
+ .vfp11_veneer  0x00000360        0x0 linker stubs
+
+.v4_bx          0x00000360        0x0
+ .v4_bx         0x00000360        0x0 linker stubs
+
+.iplt           0x00000360        0x0
+ .iplt          0x00000360        0x0 ./src/clignotant_asm.o
+
+.rel.dyn        0x00000360        0x0
+ .rel.iplt      0x00000360        0x0 ./src/clignotant_asm.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM.exidx      0x00000360        0x0
+                0x00000360                __exidx_start = .
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00000360                __exidx_end = .
+                0x00000360                _etext = .
+
+.uninit_RESERVED
+                0x10000000        0x0
+                0x10000000                _start_uninit_RESERVED = .
+ *(.bss.$RESERVED*)
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _end_uninit_RESERVED = .
+
+.data           0x10000000        0x0 load address 0x00000360
+ FILL mask 0xff
+                0x10000000                _data = .
+                [!provide]                PROVIDE (__start_data_RAM = .)
+                [!provide]                PROVIDE (__start_data_RamLoc4 = .)
+ *(vtable)
+ *(.ramfunc*)
+ *(CodeQuickAccess)
+ *(DataQuickAccess)
+ *(RamFunction)
+ *(.data*)
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _edata = .
+                [!provide]                PROVIDE (__end_data_RAM = .)
+                [!provide]                PROVIDE (__end_data_RamLoc4 = .)
+
+.igot.plt       0x10000000        0x0 load address 0x00000360
+ .igot.plt      0x10000000        0x0 ./src/clignotant_asm.o
+
+.bss            0x10000000        0x8
+                0x10000000                _bss = .
+                [!provide]                PROVIDE (__start_bss_RAM = .)
+                [!provide]                PROVIDE (__start_bss_RamLoc4 = .)
+ *(.bss*)
+ .bss.pDivRom_idiv
+                0x10000000        0x4 ./src/cr_startup_lpc80x.o
+                0x10000000                pDivRom_idiv
+ .bss.pDivRom_uidiv
+                0x10000004        0x4 ./src/cr_startup_lpc80x.o
+                0x10000004                pDivRom_uidiv
+ *(COMMON)
+                0x10000008                . = ALIGN (0x4)
+                0x10000008                _ebss = .
+                [!provide]                PROVIDE (__end_bss_RAM = .)
+                [!provide]                PROVIDE (__end_bss_RamLoc4 = .)
+                [!provide]                PROVIDE (end = .)
+
+.noinit         0x10000008        0x0
+                0x10000008                _noinit = .
+                [!provide]                PROVIDE (__start_noinit_RAM = .)
+                [!provide]                PROVIDE (__start_noinit_RamLoc4 = .)
+ *(.noinit*)
+                0x10000008                . = ALIGN (0x4)
+                0x10000008                _end_noinit = .
+                [!provide]                PROVIDE (__end_noinit_RAM = .)
+                [!provide]                PROVIDE (__end_noinit_RamLoc4 = .)
+                [!provide]                PROVIDE (_pvHeapStart = DEFINED (__user_heap_base)?__user_heap_base:.)
+                0x10001000                PROVIDE (_vStackTop = DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc4 - 0x0))
+                0xefffec55                PROVIDE (__valid_user_code_checksum = (0x0 - (((_vStackTop + (ResetISR + 0x1)) + (DEFINED (NMI_Handler)?NMI_Handler:M0_NMI_Handler + 0x1)) + (DEFINED (HardFault_Handler)?HardFault_Handler:M0_HardFault_Handler + 0x1))))
+                0x00000000                _image_start = LOADADDR (.text)
+                0x00000360                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x00000360                _image_size = (_image_end - _image_start)
+OUTPUT(clignotant_asm.axf elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x00000000       0x28
+ .ARM.attributes
+                0x00000000       0x22 ./src/clignotant.o
+ .ARM.attributes
+                0x00000022       0x2c ./src/clignotant_asm.o
+ .ARM.attributes
+                0x0000004e       0x2c ./src/cr_startup_lpc80x.o
+ .ARM.attributes
+                0x0000007a       0x31 ./src/crp.o
+ .ARM.attributes
+                0x000000ab       0x2c c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(__weak__main.o)
+
+.comment        0x00000000       0x4d
+ .comment       0x00000000       0x4d ./src/clignotant_asm.o
+                                 0x4e (size before relaxing)
+ .comment       0x0000004d       0x4e ./src/cr_startup_lpc80x.o
+ .comment       0x0000004d       0x4e ./src/crp.o
+ .comment       0x0000004d       0x4e c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(__weak__main.o)
+
+.debug_line     0x00000000      0x4ff
+ .debug_line    0x00000000       0x48 ./src/clignotant.o
+ .debug_line    0x00000048      0x31e ./src/clignotant_asm.o
+ .debug_line    0x00000366       0xe8 ./src/cr_startup_lpc80x.o
+ .debug_line    0x0000044e       0xb1 ./src/crp.o
+
+.debug_info     0x00000000      0xce6
+ .debug_info    0x00000000       0x26 ./src/clignotant.o
+ .debug_info    0x00000026      0xa36 ./src/clignotant_asm.o
+ .debug_info    0x00000a5c      0x24a ./src/cr_startup_lpc80x.o
+ .debug_info    0x00000ca6       0x40 ./src/crp.o
+
+.debug_abbrev   0x00000000      0x335
+ .debug_abbrev  0x00000000       0x14 ./src/clignotant.o
+ .debug_abbrev  0x00000014      0x196 ./src/clignotant_asm.o
+ .debug_abbrev  0x000001aa      0x153 ./src/cr_startup_lpc80x.o
+ .debug_abbrev  0x000002fd       0x38 ./src/crp.o
+
+.debug_aranges  0x00000000       0xb8
+ .debug_aranges
+                0x00000000       0x20 ./src/clignotant.o
+ .debug_aranges
+                0x00000020       0x20 ./src/clignotant_asm.o
+ .debug_aranges
+                0x00000040       0x60 ./src/cr_startup_lpc80x.o
+ .debug_aranges
+                0x000000a0       0x18 ./src/crp.o
+
+.debug_str      0x00000000     0x6a87
+ .debug_str     0x00000000       0x6d ./src/clignotant.o
+ .debug_str     0x0000006d     0x6754 ./src/clignotant_asm.o
+                               0x6847 (size before relaxing)
+ .debug_str     0x000067c1      0x1dd ./src/cr_startup_lpc80x.o
+                               0x2e32 (size before relaxing)
+ .debug_str     0x0000699e       0xe9 ./src/crp.o
+                               0x2d38 (size before relaxing)
+
+.debug_ranges   0x00000000       0x60
+ .debug_ranges  0x00000000       0x10 ./src/clignotant_asm.o
+ .debug_ranges  0x00000010       0x50 ./src/cr_startup_lpc80x.o
+
+.debug_macro    0x00000000     0x1900
+ .debug_macro   0x00000000       0x8e ./src/clignotant_asm.o
+ .debug_macro   0x0000008e      0xa60 ./src/clignotant_asm.o
+ .debug_macro   0x00000aee       0x82 ./src/clignotant_asm.o
+ .debug_macro   0x00000b70       0x28 ./src/clignotant_asm.o
+ .debug_macro   0x00000b98       0x3a ./src/clignotant_asm.o
+ .debug_macro   0x00000bd2       0x10 ./src/clignotant_asm.o
+ .debug_macro   0x00000be2      0x12e ./src/clignotant_asm.o
+ .debug_macro   0x00000d10      0x5b3 ./src/clignotant_asm.o
+ .debug_macro   0x000012c3      0x241 ./src/clignotant_asm.o
+ .debug_macro   0x00001504      0x1a8 ./src/clignotant_asm.o
+ .debug_macro   0x000016ac      0x1dd ./src/clignotant_asm.o
+ .debug_macro   0x00001889       0x29 ./src/cr_startup_lpc80x.o
+ .debug_macro   0x000018b2       0x1a ./src/crp.o
+ .debug_macro   0x000018cc       0x34 ./src/crp.o
+
+.debug_frame    0x00000000       0xdc
+ .debug_frame   0x00000000       0x2c ./src/clignotant_asm.o
+ .debug_frame   0x0000002c       0xb0 ./src/cr_startup_lpc80x.o

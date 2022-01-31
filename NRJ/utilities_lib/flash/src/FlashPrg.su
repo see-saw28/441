@@ -1,0 +1,10 @@
+FlashPrg.c:23:10:GetSecNum	24	static
+FlashPrg.c:37:5:EraseChip	8	static
+FlashPrg.c:63:5:EraseSector	24	static
+FlashPrg.c:92:5:ErasePage	24	static
+FlashPrg.c:123:5:ErasePages	24	static
+FlashPrg.c:155:5:EraseAllPages	8	static
+FlashPrg.c:180:5:BlankCheckChip	8	static
+FlashPrg.c:198:5:BlankCheckSector	24	static
+FlashPrg.c:222:5:Program	32	static
+FlashPrg.c:267:5:Compare	24	static

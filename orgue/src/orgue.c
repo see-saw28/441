@@ -57,13 +57,14 @@ int main(void) {
 
 	LPC_GPIO_PORT->DIR0 |= (1 << 17)|(1<<21) | (1<<19)|(1<<11);
 
-	LED1=1;
+
 	LED2=0;
+
 	 ///////////
 	// TIMER //
    ///////////
 
-  //precision 0.1 microseconde
+   //precision 0.1 microseconde
 	LPC_CTIMER0->PR=149;
 
 	//440Hz ie comp0 = 100 000 / 440
@@ -169,33 +170,39 @@ int main(void) {
 	//Initialisation de l'afficheur lcd et affichage d'un texte
 	init_lcd();
 
-
+	//boutons poussoirs
 	int button_bp1 = 0, new_bp1 = 0, fm_bp1 = 0;
 	int button_bp2 = 0, new_bp2 = 0, fm_bp2 = 0;
 
+	//pages parametres
 	int ecran = 0, old_ecran = 0;
 	const int nombre_pages = 5;
-	int etat_metronome=0;
 
+	//notes recue par liaison serie
 	char last_char=0;
 	int note = 0;
 	float note_jouee = 440;
 
+	//variable pour savoir s'il faut mettre à jour l'affichage
 	int refresh = 0;
 
+	//reglage du volume
 	int volume = 2;
 	const int volume_min = 1, volume_max = 5;
 	int volumes[5] = {1,2,3,5,20};
 
-	const int tempo_min = 40, tempo_max = 220;
+	//gestion du tempo metronome
+	const int tempo_min = 30, tempo_max = 240;
 
-
+	//longueur des notes en ms
 	const int longueur_min = 100, longueur_max = 1000;
 
+	//reglage de l'octave
 	int octave = 4;
 	const int octave_min = -1, octave_max = 9;
 
-	char display[100],note_en_cours[100]="";
+	//affichage
+	char display[17],note_en_cours[17]="";
 
 	int adc = 0;
 
@@ -208,11 +215,12 @@ int main(void) {
 		fm_bp1 = 0;
 		fm_bp2 = 0;
 
+		//lecture des BP
 		new_bp1=BP1;
 		new_bp2=BP2;
 
 
-		//lecture bouton
+		//detection front montants des BP
 		if ((new_bp1==0)&&(button_bp1==1)){
 			fm_bp1=1;
 			refresh = 1;
@@ -231,16 +239,17 @@ int main(void) {
 
 		//longueur notes
 		if (SysTick->CTRL & 1<<16){
-			LPC_CTIMER0->TCR=0;
+			LPC_CTIMER0->TCR=0; //arret de la pwm si le compteur systick atteint 0
 			SysTick->CTRL = (0<<SysTick_CTRL_ENABLE_Pos);
 		}
-		//LED4=etat_metronome;
 
-		//lecture clavier
+
+		//lecture clavier liaison serie
 		if (LPC_USART0->STAT & RXRDY){
 
 			last_char=LPC_USART0->RXDAT;
 
+			//notes recues
 			switch(last_char){
 				case 38 :
 					sprintf(note_en_cours,"%s","Do");
@@ -304,9 +313,9 @@ int main(void) {
 			}
 
 			refresh=1;
-			note_jouee = 440 * pow(2,(float)(note-9)/12) * pow(2,octave-4);
-			LPC_CTIMER0->MSR[3]=(int)100000/note_jouee;
-			LPC_CTIMER0->TCR=(1<<CEN);
+			note_jouee = 440 * pow(2,(float)(note-9)/12) * pow(2,octave-4); //conversion en Hz
+			LPC_CTIMER0->MSR[3]=(int)100000/note_jouee; //reglage pwm
+			LPC_CTIMER0->TCR=(1<<CEN); //activation pwm
 
 			//activation systick + reset
 			SysTick->CTRL = (1<<SysTick_CTRL_ENABLE_Pos);
@@ -322,6 +331,7 @@ int main(void) {
 			LPC_ADC->SEQA_CTRL&=~(1<<31);
 		}
 
+		//navigation dans les menus avec le potentiometre
 		ecran = 1 + adc/(4095/nombre_pages);
 
 		if (ecran>nombre_pages){
@@ -331,19 +341,12 @@ int main(void) {
 			refresh=1;
 		}
 		old_ecran = ecran;
-		//navigation
-		/*if (fm_bp1){
-			if (ecran<nombre_pages){
-				ecran++;
-			}
-
-			else {
-				ecran = 1;
-			}
-		}*/
 
 
+
+		//reglage des parametres en fonction de la page affichée
 		switch(ecran){
+			//longueur de la note
 			case 1 :
 				if (fm_bp2){
 					if (longueur < longueur_max){
@@ -353,11 +356,26 @@ int main(void) {
 					else {
 						longueur = longueur_min;
 					}
-					//longueur en ms
-					SysTick->LOAD = 7500*longueur - 1;
-					//SysTick->VAL = 0;
 				}
+				else if(fm_bp1){
+					if (longueur > longueur_min){
+						longueur -= 100;
+					}
+
+					else {
+						longueur = longueur_max;
+					}
+				}
+
+				if (fm_bp1 | fm_bp2){
+					//longueur en ms
+					SysTick->LOAD = 7500*longueur - 1; //modification de systick
+				}
+
+
+
 				break;
+			//tempo metronome
 			case 2 :
 				if (fm_bp2){
 					if (tempo < tempo_max){
@@ -367,12 +385,26 @@ int main(void) {
 					else {
 						tempo = tempo_min;
 					}
-//MRT
+				}
+				else if(fm_bp1){
+					if (tempo > tempo_min){
+						tempo -= 5;
+					}
+
+					else {
+						tempo = tempo_max;
+					}
+				}
+
+				if (fm_bp1 | fm_bp2){
+
+					//modifiation du MRT
 					LPC_MRT->Channel[0].INTVAL = (uint32_t) (60.0/tempo * 15000000);
 				}
 
 
 				break;
+			//selection octave
 			case 3 :
 				if (fm_bp2){
 					if (octave < octave_max){
@@ -382,12 +414,25 @@ int main(void) {
 					else {
 						octave = octave_min;
 					}
+				}
+				else if(fm_bp1){
+					if (octave > octave_min){
+						octave -= 1;
+					}
+
+					else {
+						octave = octave_max;
+					}
+				}
+
+				if (fm_bp1 | fm_bp2){
 
 					note_jouee = 440 * pow(2,(float)(note-9)/12) * pow(2,octave-4);
 					LPC_CTIMER0->MSR[3]=(int)100000/note_jouee;
 				}
 
 				break;
+			//gestion du volume
 			case 4 :
 				if (fm_bp2){
 					if (volume < volume_max){
@@ -397,11 +442,25 @@ int main(void) {
 					else {
 						volume = volume_min;
 					}
+				}
+				else if(fm_bp1){
+					if (volume > volume_min){
+						volume -= 1;
+					}
+
+					else {
+						volume = volume_max;
+					}
+				}
+
+				if (fm_bp1 | fm_bp2){
+
 					//reglage pwm pour jouer sur le volume
 					LPC_CTIMER0->MSR[1]=volumes[volume];
 				}
 
 				break;
+
 			case 5 :
 
 				break;

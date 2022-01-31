@@ -1,0 +1,3 @@
+swm.c:12:6:ConfigSWM	32	static
+swm.c:43:6:EnableFixedPinFunc	16	static
+swm.c:60:6:DisableFixedPinFunc	16	static

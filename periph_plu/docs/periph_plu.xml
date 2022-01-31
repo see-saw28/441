@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Schematic_data>
+    <Profile design="0" ff="4" in="6" lut="26" mcu="LPC80x" out="8" package="LPC54113J128BD64" sdk="ksdk2_0">LPC80x</Profile>
+    <active_symbols>
+        <symbol connections="0" id="IN0" name="IN0" type="IN" x="5.64" y="25.86"/>
+        <symbol connections="0" id="IN1" name="IN1" type="IN" x="5.79" y="34.43"/>
+        <symbol connections="0" id="IN2" name="IN2" type="IN" x="5.5" y="12.71"/>
+        <symbol connections="0" id="IN3" name="IN3" type="IN" x="5.64" y="47.57"/>
+        <symbol connections="0" id="IN4" name="IN4" type="IN" x="9.07" y="85.14"/>
+        <symbol connections="0" id="IN5" name="IN5" type="IN" x="9.36" y="92.71"/>
+        <symbol connections="2" id="LUT4" name="OR0" type="LUT" x="16.79" y="22.71"/>
+        <symbol connections="1" id="LUT5" name="NOT1" type="LUT" x="34.21" y="8.71"/>
+        <symbol connections="1" id="LUT6" name="NOT2" type="LUT" x="34.64" y="22.71"/>
+        <symbol connections="1" id="LUT7" name="NOT3" type="LUT" x="34.21" y="36.71"/>
+        <symbol connections="3" id="LUT8" name="AND4" type="LUT" x="53.5" y="13.29"/>
+        <symbol connections="3" id="LUT9" name="AND5" type="LUT" x="54.07" y="27.57"/>
+        <symbol connections="3" id="LUT10" name="AND6" type="LUT" x="53.07" y="48.57"/>
+        <symbol connections="3" id="LUT11" name="AND7" type="LUT" x="52.36" y="69.14"/>
+        <symbol connections="2" id="LUT12" name="OR8" type="LUT" x="67.93" y="15.29"/>
+        <symbol connections="2" id="LUT13" name="OR9" type="LUT" x="66.5" y="58.0"/>
+        <symbol connections="2" id="LUT14" name="AND10" type="LUT" x="78.36" y="16.14"/>
+        <symbol connections="2" id="LUT15" name="AND11" type="LUT" x="79.07" y="45.29"/>
+        <symbol connections="2" id="LUT16" name="NAND12" type="LUT" x="33.5" y="87.86"/>
+        <symbol connections="1" id="OUT0" name="OUT0" type="OUT" x="90.64" y="20.14"/>
+        <symbol connections="1" id="OUT1" name="OUT1" type="OUT" x="91.64" y="49.29"/>
+    </active_symbols>
+    <connections>
+        <connection end="LUT16" pin="0" start="IN4">
+            <path x="24.79" y="86.14"/>
+            <path x="24.79" y="92.02"/>
+        </connection>
+        <connection end="LUT16" pin="1" start="IN5">
+            <path x="24.71" y="93.71"/>
+            <path x="24.71" y="93.69"/>
+        </connection>
+        <connection end="LUT5" pin="0" start="IN2">
+            <path x="23.14" y="13.71"/>
+            <path x="23.14" y="13.71"/>
+        </connection>
+        <connection end="LUT9" pin="0" start="IN2">
+            <path x="32.57" y="13.71"/>
+            <path x="32.57" y="31.32"/>
+        </connection>
+        <connection end="LUT7" pin="0" start="IN2">
+            <path x="32.36" y="13.71"/>
+            <path x="32.36" y="41.71"/>
+        </connection>
+        <connection end="LUT10" pin="0" start="LUT7">
+            <path x="48.84" y="41.71"/>
+            <path x="48.84" y="52.32"/>
+        </connection>
+        <connection end="LUT11" pin="0" start="IN2">
+            <path x="32.14" y="13.71"/>
+            <path x="32.14" y="72.89"/>
+        </connection>
+        <connection end="LUT4" pin="0" start="IN0">
+            <path x="14.71" y="26.86"/>
+            <path x="14.71" y="26.88"/>
+        </connection>
+        <connection end="LUT4" pin="1" start="IN1">
+            <path x="14.79" y="35.43"/>
+            <path x="14.79" y="28.55"/>
+        </connection>
+        <connection end="LUT10" pin="1" start="IN1">
+            <path x="24.21" y="35.43"/>
+            <path x="24.21" y="53.57"/>
+        </connection>
+        <connection end="LUT11" pin="1" start="IN1">
+            <path x="24.0" y="35.43"/>
+            <path x="24.0" y="74.14"/>
+        </connection>
+        <connection end="LUT8" pin="0" start="LUT5">
+            <path x="48.55" y="13.71"/>
+            <path x="48.55" y="17.04"/>
+        </connection>
+        <connection end="LUT8" pin="1" start="LUT4">
+            <path x="28.21" y="27.71"/>
+            <path x="28.21" y="18.29"/>
+        </connection>
+        <connection end="LUT6" pin="0" start="LUT4">
+            <path x="30.14" y="27.71"/>
+            <path x="30.14" y="27.71"/>
+        </connection>
+        <connection end="LUT9" pin="1" start="LUT6">
+            <path x="48.77" y="27.71"/>
+            <path x="48.77" y="32.57"/>
+        </connection>
+        <connection end="LUT8" pin="2" start="IN3">
+            <path x="51.93" y="48.57"/>
+            <path x="51.93" y="19.54"/>
+        </connection>
+        <connection end="LUT9" pin="2" start="IN3">
+            <path x="51.93" y="48.57"/>
+            <path x="51.93" y="33.82"/>
+        </connection>
+        <connection end="LUT10" pin="2" start="IN3">
+            <path x="51.71" y="48.57"/>
+            <path x="51.71" y="54.82"/>
+        </connection>
+        <connection end="LUT11" pin="2" start="IN3">
+            <path x="51.79" y="48.57"/>
+            <path x="51.79" y="75.39"/>
+        </connection>
+        <connection end="LUT12" pin="0" start="LUT8">
+            <path x="65.21" y="18.29"/>
+            <path x="65.21" y="19.45"/>
+        </connection>
+        <connection end="LUT12" pin="1" start="LUT9">
+            <path x="65.5" y="32.57"/>
+            <path x="65.5" y="21.12"/>
+        </connection>
+        <connection end="LUT13" pin="0" start="LUT10">
+            <path x="64.29" y="53.57"/>
+            <path x="64.29" y="62.17"/>
+        </connection>
+        <connection end="LUT13" pin="1" start="LUT11">
+            <path x="63.93" y="74.14"/>
+            <path x="63.93" y="63.83"/>
+        </connection>
+        <connection end="LUT14" pin="0" start="LUT12">
+            <path x="77.79" y="20.29"/>
+            <path x="77.79" y="20.31"/>
+        </connection>
+        <connection end="OUT0" pin="0" start="LUT14">
+            <path x="89.07" y="21.14"/>
+            <path x="89.07" y="21.14"/>
+        </connection>
+        <connection end="LUT15" pin="0" start="LUT13">
+            <path x="77.29" y="63.0"/>
+            <path x="77.29" y="49.45"/>
+        </connection>
+        <connection end="LUT15" pin="1" start="LUT16">
+            <path x="78.84" y="92.86"/>
+            <path x="78.84" y="51.12"/>
+        </connection>
+        <connection end="LUT14" pin="1" start="LUT16">
+            <path x="78.91" y="92.86"/>
+            <path x="78.91" y="21.98"/>
+        </connection>
+        <connection end="OUT1" pin="0" start="LUT15">
+            <path x="90.21" y="50.29"/>
+            <path x="90.21" y="50.29"/>
+        </connection>
+    </connections>
+    <LUTdata>
+        <data hex="0xeeeeeeee" id="LUT4" inputs="2" name="OR0" type="3"/>
+        <data hex="0x55555555" id="LUT5" inputs="1" name="NOT1" type="9"/>
+        <data hex="0x55555555" id="LUT6" inputs="1" name="NOT2" type="9"/>
+        <data hex="0x55555555" id="LUT7" inputs="1" name="NOT3" type="9"/>
+        <data hex="0x80808080" id="LUT8" inputs="3" name="AND4" type="1"/>
+        <data hex="0x80808080" id="LUT9" inputs="3" name="AND5" type="1"/>
+        <data hex="0x80808080" id="LUT10" inputs="3" name="AND6" type="1"/>
+        <data hex="0x80808080" id="LUT11" inputs="3" name="AND7" type="1"/>
+        <data hex="0xeeeeeeee" id="LUT12" inputs="2" name="OR8" type="3"/>
+        <data hex="0xeeeeeeee" id="LUT13" inputs="2" name="OR9" type="3"/>
+        <data hex="0x88888888" id="LUT14" inputs="2" name="AND10" type="1"/>
+        <data hex="0x88888888" id="LUT15" inputs="2" name="AND11" type="1"/>
+        <data hex="0x77777777" id="LUT16" inputs="2" name="NAND12" type="2"/>
+    </LUTdata>
+</Schematic_data>

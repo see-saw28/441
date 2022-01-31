@@ -1,0 +1,11 @@
+utilities.c:30:6:PutTerminalString	24	static
+utilities.c:59:10:GetTerminalString	24	static
+utilities.c:98:6:GetConsoleString	16	static
+utilities.c:117:15:GetConsoleCharacter	40	static
+utilities.c:136:6:WaitConsoleEnter	32	static
+utilities.c:152:6:DebugWaitEsc	8	static
+utilities.c:180:10:GetConsoleInput	88	static
+utilities.c:231:6:Config_LED	16	static
+utilities.c:247:6:LED_Off	16	static
+utilities.c:259:6:LED_On	16	static
+utilities.c:280:6:Setup_LPC8xx_Low_Power	8	static

@@ -1,0 +1,4 @@
+gpio.c:37:6:GPIOInit	8	static
+gpio.c:58:10:GPIOGetPinValue	16	static
+gpio.c:77:6:GPIOSetBitValue	24	static
+gpio.c:101:6:GPIOSetDir	24	static

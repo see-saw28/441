@@ -2,9 +2,6 @@
  * i2c.c
  *
  *  Created on: Apr 5, 2016
- *  modifié par P Varoqui le 12 nov 2018 :
- *  - correction de I2CmasterWriteRead
- *  - ajout de I2CmasterRead
  *
  */
 
@@ -41,35 +38,6 @@ void I2CmasterWrite( uint8_t *WrBuf, uint8_t WrLen )
 }
 
 /*****************************************************************************
-** Function name:		I2CmasterRead
-**
-** Description:		Lecture d'une série d'octet sur un périphérique I2C
-**
-** parameters:      adresse du périphérique (sur 8 bits)
-**                  buffer de réception
-**                  nombre d'octets à recevoir
-** Returned value:		None
-**
-*****************************************************************************/
-void I2CmasterRead( uint8_t ad, uint8_t *RdBuf, uint8_t RdLen )
-{
-  uint16_t i;
-  WaitI2CMasterState(LPC_I2C0, I2C_STAT_MSTST_IDLE);	// Wait for the master state to be idle
-  LPC_I2C0->MSTDAT = ad | RD_BIT;    					// Adresse avec bit lecture
-  LPC_I2C0->MSTCTL = CTL_MSTSTART;						// Start the transaction by setting the MSTSTART bit to 1 in the Master control register.
-  WaitI2CMasterState(LPC_I2C0, I2C_STAT_MSTST_RX);		// Wait for the address to be ACK'd
-
-	for ( i = 0; i < RdLen; i++ ) {
-		LPC_I2C0->MSTCTL = CTL_MSTCONTINUE;					// Continue the transaction
-		WaitI2CMasterState(LPC_I2C0, I2C_STAT_MSTST_RX);	// Wait for the data to be ACK'd
-		*(RdBuf + i) = LPC_I2C0->MSTDAT;					// Send the data to the slave
-
-  }
-  LPC_I2C0->MSTCTL = CTL_MSTSTOP;                    // Send a stop to end the transaction
-	return;
-}
-
-/*****************************************************************************
 ** Function name:		I2CmasterWriteRead
 **
 ** Description:		  Write the command to the i2C slave and followed by using repeated start 
@@ -89,8 +57,8 @@ void I2CmasterWriteRead( uint8_t *WrBuf, uint8_t *RdBuf, uint8_t WrLen, uint8_t 
 	
 	i2c_addr = *WrBuf;
   WaitI2CMasterState(LPC_I2C0, I2C_STAT_MSTST_IDLE);	// Wait for the master state to be idle
-  LPC_I2C0->MSTDAT = i2c_addr;    						// Address with 0 for RWn bit (WRITE)
-  LPC_I2C0->MSTCTL = CTL_MSTSTART;						// Start the transaction by setting the MSTSTART bit to 1 in the Master control register.
+  LPC_I2C0->MSTDAT = i2c_addr;    										// Address with 0 for RWn bit (WRITE)
+  LPC_I2C0->MSTCTL = CTL_MSTSTART;										// Start the transaction by setting the MSTSTART bit to 1 in the Master control register.
   WaitI2CMasterState(LPC_I2C0, I2C_STAT_MSTST_TX);		// Wait for the address to be ACK'd
 	
 	for ( i = 0; i < WrLen; i++ ) {
@@ -100,13 +68,12 @@ void I2CmasterWriteRead( uint8_t *WrBuf, uint8_t *RdBuf, uint8_t WrLen, uint8_t 
   }
 
   LPC_I2C0->MSTDAT = i2c_addr | RD_BIT;    						// Address with 1 for RWn bit (READ)
-  LPC_I2C0->MSTCTL = CTL_MSTSTART;								// Start the transaction by setting the MSTSTART bit to 1 in the Master control register.
+  LPC_I2C0->MSTCTL = CTL_MSTSTART;										// Start the transaction by setting the MSTSTART bit to 1 in the Master control register.	
 
 	for ( i = 0; i < RdLen; i++ ) {
-		LPC_I2C0->MSTCTL = CTL_MSTCONTINUE;						// Continue the transaction
 		WaitI2CMasterState(LPC_I2C0, I2C_STAT_MSTST_RX);		// Wait for the data to be ACK'd
-		*(RdBuf + i) = LPC_I2C0->MSTDAT;						// Send the data to the slave
-
+		*(RdBuf + i) = LPC_I2C0->MSTDAT;									// Send the data to the slave
+		LPC_I2C0->MSTCTL = CTL_MSTCONTINUE;								// Continue the transaction
   }	
   LPC_I2C0->MSTCTL = CTL_MSTSTOP;                    // Send a stop to end the transaction
 	return;

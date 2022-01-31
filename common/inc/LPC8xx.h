@@ -572,7 +572,6 @@ typedef struct {
   __I  uint32_t RESERVED0[12];    // 0x40 - 0x6C 
   __IO uint32_t CTCR;             // 0x70
   __IO uint32_t PWMC;             // 0x74
-  __IO uint32_t MSR[4];			  // 0x78 -0x84 -> oublié !!
 } LPC_TIMER_TypeDef;
 
 

@@ -1,0 +1,2 @@
+I2C_temperature_main.c:35:10:ReadTempSensor	24	static
+I2C_temperature_main.c:90:5:main	16	static

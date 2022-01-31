@@ -6,7 +6,7 @@
  * Generated linker script file for LPC804
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v11.4.1 [Build 6260] [2021-09-15] on 1 déc. 2021 à 22:30:07
+ * MCUXpresso IDE v11.4.1 [Build 6260] [2021-09-15] on 14 déc. 2021 à 12:02:48
  */
 
 INCLUDE "Multi_Timer_Blinky_flash_library.ld"

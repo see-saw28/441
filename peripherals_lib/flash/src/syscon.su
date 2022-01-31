@@ -1,0 +1,4 @@
+../src/syscon.c:14:6:Enable_Periph_Clock	16	static
+../src/syscon.c:29:6:Disable_Periph_Clock	16	static
+../src/syscon.c:44:6:Do_Periph_Reset	16	static
+../src/syscon.c:77:6:Config_Fclksel_Mux	16	static

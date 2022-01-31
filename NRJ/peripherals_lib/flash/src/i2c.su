@@ -1,0 +1,5 @@
+i2c.c:22:6:I2CmasterWrite	24	static
+i2c.c:50:6:I2CmasterRead	24	static
+i2c.c:81:6:I2CmasterWriteRead	32	static
+i2c.c:124:6:WaitI2CMasterState	16	static
+i2c.c:152:6:WaitI2CSlaveState	16	static

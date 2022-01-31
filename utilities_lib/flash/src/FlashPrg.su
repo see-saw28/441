@@ -1,0 +1,10 @@
+../src/FlashPrg.c:23:10:GetSecNum	24	static
+../src/FlashPrg.c:37:5:EraseChip	16	static
+../src/FlashPrg.c:63:5:EraseSector	32	static
+../src/FlashPrg.c:92:5:ErasePage	32	static
+../src/FlashPrg.c:123:5:ErasePages	32	static
+../src/FlashPrg.c:155:5:EraseAllPages	16	static
+../src/FlashPrg.c:180:5:BlankCheckChip	16	static
+../src/FlashPrg.c:198:5:BlankCheckSector	32	static
+../src/FlashPrg.c:222:5:Program	40	static
+../src/FlashPrg.c:267:5:Compare	32	static

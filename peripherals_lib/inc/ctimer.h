@@ -28,10 +28,6 @@
 #define MR3I   9
 #define MR3R   10
 #define MR3S   11
-#define MR0RL  24
-#define MR1RL  25
-#define MR2RL  26
-#define MR3RL  27
 
 // Capture Control Register (CCR) shifters
 #define CAP0RE 0

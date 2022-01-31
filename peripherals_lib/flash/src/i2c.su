@@ -1,0 +1,4 @@
+../src/i2c.c:22:6:I2CmasterWrite	24	static
+../src/i2c.c:54:6:I2CmasterWriteRead	32	static
+../src/i2c.c:95:6:WaitI2CMasterState	16	static
+../src/i2c.c:121:6:WaitI2CSlaveState	16	static
